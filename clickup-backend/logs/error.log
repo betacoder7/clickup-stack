@@ -1,0 +1,100 @@
+18:07:53 GMT+0530 (India Standard Time) - /users/ - POST - SequelizeValidationError: string violation: password cannot be an array or an object
+18:09:48 GMT+0530 (India Standard Time) - /users/login - POST - TypeError: bcrypt.compareHash is not a function. (In 'bcrypt.compareHash(user.password, body.password)', 'bcrypt.compareHash' is undefined)
+18:10:00 GMT+0530 (India Standard Time) - /users/login - POST - ReferenceError: Can't find variable: userData
+18:21:39 GMT+0530 (India Standard Time) - /workspaces/auth/:workspaceUUID/access - GET - Error: Association with alias "users" does not exist on workspaceAccesses
+18:21:57 GMT+0530 (India Standard Time) - /workspaces/auth/:workspaceUUID/access - GET - ReferenceError: Cannot access 'users' before initialization.
+18:22:22 GMT+0530 (India Standard Time) - /workspaces/auth/:workspaceUUID/access - GET - Error: Association with alias "users" does not exist on workspaceAccesses
+18:28:47 GMT+0530 (India Standard Time) - /workspaces/auth/all - GET - Error: Association with alias "workspaces" does not exist on workspaceAccesses
+18:29:45 GMT+0530 (India Standard Time) - /workspaces/auth/all - GET - Error: Association with alias "workspaces" does not exist on workspaceAccesses
+10:17:28 GMT+0530 (India Standard Time) - /folders/auth/:spaceUUID - POST - ReferenceError: Cannot access 'folder' before initialization.
+10:17:41 GMT+0530 (India Standard Time) - /folders/auth/:spaceUUID - POST - SequelizeValidationError: notNull Violation: folders.uuid cannot be null
+10:18:40 GMT+0530 (India Standard Time) - /folders/auth/:folderUUID - PUT - Error: Found empty body
+10:18:45 GMT+0530 (India Standard Time) - /folders/auth/:folderUUID - PUT - Error: Found empty body
+10:55:39 GMT+0530 (India Standard Time) - /tasks/auth/:listUUID - POST - Error: Found empty body
+10:58:10 GMT+0530 (India Standard Time) - /tasks/auth/:taskUUID - PUT - Error: Found empty body
+10:59:26 GMT+0530 (India Standard Time) - /tasks/auth/:taskUUID - PUT - Error: Found empty body
+11:17:58 GMT+0530 (India Standard Time) - /microtasks/auth/:taskUUID - POST - Error: Found empty body
+11:19:00 GMT+0530 (India Standard Time) - /microtasks/auth/:taskUUID - POST - Error: Found empty body
+11:32:53 GMT+0530 (India Standard Time) - /subtasks/auth/:subtaskUUID - PUT - Error: Found empty body
+11:51:54 GMT+0530 (India Standard Time) - /microtasks/auth/:taskUUID - POST - Error: Found empty body
+11:55:34 GMT+0530 (India Standard Time) - /microtasks/auth/:subtaskUUID - POST - SequelizeValidationError: notNull Violation: microtasks.uuid cannot be null
+11:56:32 GMT+0530 (India Standard Time) - /microtasks/auth/:subtaskUUID - POST - Error: Found empty body
+12:00:26 GMT+0530 (India Standard Time) - /microtasks/auth/subtask/:subtaskUUID/all - GET - SequelizeDatabaseError: Unknown column 'microtasks.taskId' in 'where clause'
+12:38:45 GMT+0530 (India Standard Time) - /tags/auth/workspace/:workspaceUUID - POST - Error: Found empty body
+12:39:00 GMT+0530 (India Standard Time) - /tags/auth/workspace/:workspaceUUID - POST - Error: notNull Violation: textColor cannot be null
+12:40:26 GMT+0530 (India Standard Time) - /tags/auth/:tagUUID - PUT - Error: Found empty body
+12:51:20 GMT+0530 (India Standard Time) - /tags/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: tags is associated to tasks using an alias. You must use the 'as' keyword to specify the alias within your include statement.
+12:57:01 GMT+0530 (India Standard Time) - /tags/auth/task/:taskUUID/all - GET - Error: Only HasMany associations support include.separate
+13:13:56 GMT+0530 (India Standard Time) - /users/login - POST - Error: Found empty body
+13:14:08 GMT+0530 (India Standard Time) - /users/login - POST - ReferenceError: Can't find variable: validateImage
+13:14:33 GMT+0530 (India Standard Time) - /users/login - POST - ReferenceError: Can't find variable: space
+13:15:00 GMT+0530 (India Standard Time) - /users/login - POST - ReferenceError: Can't find variable: uuidv1
+13:17:06 GMT+0530 (India Standard Time) - /users/login - POST - Error: Found empty body
+12:07:41 GMT+0530 (India Standard Time) - /users/login - POST - Error: Found empty body
+12:08:40 GMT+0530 (India Standard Time) - /tags/auth/task/:taskUUID/user/:uuid - POST - SequelizeValidationError: notNull Violation: taskassigns.userId cannot be null,
+notNull Violation: taskassigns.taskId cannot be null
+12:12:14 GMT+0530 (India Standard Time) - /tags/auth/subtask/:subtaskUUID/user/:uuid - POST - SequelizeDatabaseError: Unknown column 'subtaskassigns.taskId' in 'where clause'
+12:20:35 GMT+0530 (India Standard Time) - /tags/auth/microtask/:microtaskUUID/user/:uuid - POST - SequelizeValidationError: notNull Violation: microtaskassigns.userId cannot be null,
+notNull Violation: microtaskassigns.microtaskId cannot be null
+12:21:41 GMT+0530 (India Standard Time) - /tags/auth/microtask/:microtaskUUID/user/:uuid - DELETE - SequelizeDatabaseError: Unknown column 'microtaskassigns.taskId' in 'where clause'
+12:21:53 GMT+0530 (India Standard Time) - /tags/auth/microtask/:microtaskUUID/user/:uuid - DELETE - SequelizeDatabaseError: Unknown column 'microtaskassigns.taskId' in 'where clause'
+13:27:46 GMT+0530 (India Standard Time) - /tasks/auth/list/:listUUID/all - GET - ReferenceError: Can't find variable: assignees
+13:27:55 GMT+0530 (India Standard Time) - /tasks/auth/list/:listUUID/all - GET - SequelizeEagerLoadingError: tags is associated to tasks using an alias. You must use the 'as' keyword to specify the alias within your include statement.
+13:33:09 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - ReferenceError: Can't find variable: users
+13:36:47 GMT+0530 (India Standard Time) - /microtasks/auth/subtask/:subtaskUUID/all - GET - SequelizeEagerLoadingError: users is associated to microtasks using an alias. You've included an alias (users), but it does not match the alias(es) defined in your association (assignees).
+14:14:26 GMT+0530 (India Standard Time) - /spaces/auth/:workspaceUUID - POST - Error: InvalidInput Violation image must be image
+14:27:20 GMT+0530 (India Standard Time) - /users/search/:text - GET - ReferenceError: Can't find variable: getQueries
+14:31:30 GMT+0530 (India Standard Time) - /users/search/:text - GET - ReferenceError: Can't find variable: getQueries
+16:58:24 GMT+0530 (India Standard Time) - /workspaces/auth/:workspaceUUID/access/search/:text - GET - ReferenceError: Can't find variable: Op
+17:01:32 GMT+0530 (India Standard Time) - /workspaces/auth/:workspaceUUID/access/:uuid - POST - Error: Missing where attribute in the options parameter passed to findOrCreate. Please note that the API has changed, and is now options only (an object with where, defaults keys, transaction etc.)
+17:03:40 GMT+0530 (India Standard Time) - /workspaces/auth/:workspaceUUID/access/:uuid - POST - Error: Missing where attribute in the options parameter passed to findOrCreate. Please note that the API has changed, and is now options only (an object with where, defaults keys, transaction etc.)
+10:40:50 GMT+0530 (India Standard Time) - /tags/auth/workspace/:workspaceUUID/search/:text - GET - ReferenceError: Can't find variable: Op
+10:12:22 GMT+0530 (India Standard Time) - /users/ - POST - SequelizeConnectionRefusedError: Failed to connect
+10:12:28 GMT+0530 (India Standard Time) - /users/ - POST - SequelizeConnectionRefusedError: Failed to connect
+10:12:30 GMT+0530 (India Standard Time) - /users/ - POST - SequelizeConnectionRefusedError: Failed to connect
+10:17:46 GMT+0530 (India Standard Time) - /users/login - POST - SequelizeConnectionRefusedError: Failed to connect
+10:18:58 GMT+0530 (India Standard Time) - /users/login - POST - SequelizeConnectionRefusedError: Failed to connect
+10:19:03 GMT+0530 (India Standard Time) - /users/login - POST - SequelizeConnectionRefusedError: Failed to connect
+10:19:04 GMT+0530 (India Standard Time) - /users/login - POST - SequelizeConnectionRefusedError: Failed to connect
+10:19:36 GMT+0530 (India Standard Time) - /users/ - POST - SequelizeConnectionRefusedError: Failed to connect
+10:19:38 GMT+0530 (India Standard Time) - /users/ - POST - SequelizeConnectionRefusedError: Failed to connect
+10:20:02 GMT+0530 (India Standard Time) - /users/ - POST - SequelizeConnectionRefusedError: Failed to connect
+10:20:50 GMT+0530 (India Standard Time) - /users/ - POST - SequelizeConnectionRefusedError: Failed to connect
+10:23:40 GMT+0530 (India Standard Time) - /users/ - POST - SequelizeConnectionRefusedError: Failed to connect
+10:24:56 GMT+0530 (India Standard Time) - /users/ - POST - SequelizeConnectionRefusedError: Failed to connect
+10:46:28 GMT+0530 (India Standard Time) - /users/ - POST - SequelizeConnectionRefusedError: Failed to connect
+11:24:57 GMT+0530 (India Standard Time) - /users/ - POST - SequelizeConnectionRefusedError: Failed to connect
+11:25:26 GMT+0530 (India Standard Time) - /users/ - POST - SequelizeConnectionRefusedError: Failed to connect
+11:30:47 GMT+0530 (India Standard Time) - /users/ - POST - SequelizeConnectionRefusedError: Failed to connect
+10:56:42 GMT+0530 (India Standard Time) - /folders/auth/:spaceUUID - POST - ReferenceError: Can't find variable: models
+10:58:18 GMT+0530 (India Standard Time) - /folders/auth/:spaceUUID - POST - ReferenceError: Can't find variable: models
+10:58:59 GMT+0530 (India Standard Time) - /folders/auth/:spaceUUID - POST - ReferenceError: Can't find variable: req
+10:59:36 GMT+0530 (India Standard Time) - /folders/auth/:spaceUUID - POST - Error: WHERE parameter "[object Object]" has invalid "undefined" value
+11:01:17 GMT+0530 (India Standard Time) - /folders/auth/:spaceUUID - POST - Error: WHERE parameter "[object Object]" has invalid "undefined" value
+11:01:45 GMT+0530 (India Standard Time) - /folders/auth/:spaceUUID - POST - TypeError: res.get is not a function. (In 'res.get("body")', 'res.get' is undefined)
+11:04:15 GMT+0530 (India Standard Time) - /folders/auth/:spaceUUID - POST - TypeError: res.get is not a function. (In 'res.get("body")', 'res.get' is undefined)
+11:06:47 GMT+0530 (India Standard Time) - /folders/auth/:spaceUUID - POST - TypeError: res.get is not a function. (In 'res.get("body")', 'res.get' is undefined)
+11:10:23 GMT+0530 (India Standard Time) - /folders/auth/:spaceUUID - POST - TypeError: res.get is not a function. (In 'res.get("body")', 'res.get' is undefined)
+11:30:55 GMT+0530 (India Standard Time) - /folders/auth/:spaceUUID - POST - TypeError: res.get is not a function. (In 'res.get("body")', 'res.get' is undefined)
+17:02:50 GMT+0530 (India Standard Time) - /folders/auth/:spaceUUID - POST - TypeError: undefined is not an object (evaluating 'req.params.spaceUUID')
+18:53:37 GMT+0530 (India Standard Time) - /folders/auth/:spaceUUID - POST - TypeError: model.findOne is not a function. (In 'model.findOne({
+    where: {
+      [key]: value
+    }
+  })', 'model.findOne' is undefined)
+18:56:26 GMT+0530 (India Standard Time) - /folders/auth/:spaceUUID - POST - TypeError: model.findOne is not a function. (In 'model.findOne({
+    where: {
+      [key]: value
+    }
+  })', 'model.findOne' is undefined)
+18:59:01 GMT+0530 (India Standard Time) - /folders/auth/:spaceUUID - POST - TypeError: model.findOne is not a function. (In 'model.findOne({
+    where: {
+      [key]: value
+    }
+  })', 'model.findOne' is undefined)
+19:26:44 GMT+0530 (India Standard Time) - /folders/auth/:spaceUUID - POST - TypeError: model.findOne is not a function. (In 'model.findOne({
+    where: {
+      [key]: value
+    }
+  })', 'model.findOne' is undefined)
+19:28:12 GMT+0530 (India Standard Time) - /folders/auth/:spaceUUID - POST - ReferenceError: Can't find variable: lists

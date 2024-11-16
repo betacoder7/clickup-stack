@@ -1,0 +1,70 @@
+@import "./tailwind.css";
+
+* {
+    user-select: text;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color-scheme: dark;
+}
+
+* {
+    outline: none;
+}
+
+img {
+    user-select: none;
+}
+
+.auth-back-gradient {
+    background: url("../SVGs/auth-background-gradient.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.auth-back-gradient::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 200%;
+    height: 300%;
+    top: -100%;
+    left: -50%;
+    background: url("../SVGs/auth-background-dots.svg");
+    transform: rotate(-28deg);
+}
+
+.auth-back-gradient::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: url("../SVGs/auth-background-shape.svg") center top no-repeat;
+    background-size: 100%;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #30353c;
+    border-radius: 4px;
+}
+
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #656f7d transparent;
+}
+
+.MuiPickersLayout-root {
+    background-color: #374151 !important;
+}
