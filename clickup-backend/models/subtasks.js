@@ -9,6 +9,11 @@ module.exports = (sequelize, DataTypes) => {
 
       this.hasMany(models.microtasks);
 
+      this.belongsToMany(models.tags, {
+        through: "subtasktags",
+        as: "tags"
+      });
+
       this.belongsToMany(models.users, {
         through: "subtaskassigns",
         as: "assignees",
@@ -18,6 +23,7 @@ module.exports = (sequelize, DataTypes) => {
   subtasks.init({
     taskId: { type: DataTypes.INTEGER, allowNull: false },
     status: { type: DataTypes.STRING, allowNull: false, defaultValue: "TODO" },
+    description: { type: DataTypes.STRING, allowNull: true },
     name: { type: DataTypes.STRING, allowNull: false },
     dueDate: { type: DataTypes.DATE, allowNull: true },
     startDate: { type: DataTypes.DATE, allowNull: true },

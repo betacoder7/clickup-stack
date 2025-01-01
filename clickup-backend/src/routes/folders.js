@@ -29,12 +29,8 @@ app.post("/auth/:spaceUUID", async (res) => {
         });
 
         const spaceUUID = res.req.param("spaceUUID");
-        console.log(spaceUUID, "spaceUUID");
-
 
         const spaceData = await findOne(spaces, "uuid", spaceUUID);
-        console.log(spaceData, "spaceData");
-
 
         if (spaceData == null) {
             return res.json(errorBody("Space doesn't exists"), 404);

@@ -245,6 +245,8 @@ app.get("/auth/:workspaceUUID/access/search/:text", async (res) => {
         const user = res.get("user");
 
         const text = res.req.param("text");
+        console.log(text, "text");
+
 
         const workspace = await findOne(workspaces, "uuid", workspaceUUID);
 
@@ -273,7 +275,7 @@ app.get("/auth/:workspaceUUID/access/search/:text", async (res) => {
         });
 
         const usersData = workspaceData.map(item => item.user);
-
+        console.log(usersData, "usersData");
         return res.json({ res: usersData });
     }
     catch (e) {

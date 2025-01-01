@@ -10,6 +10,12 @@ import SpaceReducer from "./slices/spaces";
 import FolderReducer from "./slices/folders";
 import ListReducer from "./slices/lists";
 import TaskReducer from "./slices/tasks";
+import AssignsSlice from "./slices/taskassigns";
+import tagtaskReducer from "./slices/tasktag";
+import tagReducer from "./slices/tag";
+import subtaskReducer  from "./slices/subtask"
+import subtaskassignsReducer from "./slices/subtaskassigns"
+import subtasktagReducer from "./slices/subtasktag"
 
 const store = configureStore({
     reducer: {
@@ -23,6 +29,12 @@ const store = configureStore({
         folderSlice: FolderReducer,
         listSlice: ListReducer,
         taskSlice: TaskReducer,
+        assignsSlice: AssignsSlice,
+        tagtaskSlice: tagtaskReducer,
+        tagSlice: tagReducer,
+        subtaskSlice:subtaskReducer,
+        subtaskassignsSlice:subtaskassignsReducer,
+        tagsubtaskSlice: subtasktagReducer,
     },
 });
 

@@ -13,7 +13,7 @@ import UpdateTaskDialog from "../components/update-task";
 // import Popup from "../components/Table-pop";
 // import { Button } from "@mui/material";
 import Taskcetegaryfunacality from "./Task-cetegary-funcality";
-import AllTask from "../components/All-Task";
+// import AllTask from "../components/All-Task";
 import TableTask from "../components/Task-table";
 
 export default function ListManagementScreen() {
@@ -85,7 +85,7 @@ export default function ListManagementScreen() {
         </div>
         <div class="border-t border-slate-500 my-2"></div>
         <Taskcetegaryfunacality />
-        <AllTask />
+        {/* <AllTask /> */}
         <TableTask />
     </div>;
 }

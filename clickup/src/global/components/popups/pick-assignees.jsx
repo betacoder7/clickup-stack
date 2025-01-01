@@ -13,7 +13,6 @@ export default function PickAssignees({ onAdd, onRemove, assignees }) {
 
     const [searchAssignees, setSearchAssignees] = useState(null);
     const [fetched, setFetched] = useState(false);
-
     const [error, setError] = useState(null);
 
     useEffect(() => {
@@ -89,7 +88,8 @@ export default function PickAssignees({ onAdd, onRemove, assignees }) {
                     <div className="px-2 gap-2 rounded-md h-10 bg-slate-500 transition-all flex-shrink-0 duration-100 ease-in-out cursor-pointer items-center p-1 animate-pulse" key={index} />)
                     : <div className="h-[200px] flex items-center justify-center">
                         <h4 className="text-sm">No users</h4>
-                    </div>}
+                    </div>
+            }
         </div>
     </div>;
 }

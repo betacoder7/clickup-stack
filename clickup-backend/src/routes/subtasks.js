@@ -3,7 +3,7 @@ import bodyParser from "../global/middlewares/bodyparser";
 
 import { nullCheck, defaultNullFields } from "../global/validations/nullCheck";
 import { errorBody } from "../global/functions/errorBody";
-import { tasks, subtasks, users } from "../../models";
+import { tasks, subtasks, users ,subtasktags } from "../../models";
 import Jwt from "../global/middlewares/jwt";
 import { findOne, update } from "../global/functions/modelOperations";
 import { Hono } from "hono";
@@ -96,7 +96,10 @@ app.get("/auth/task/:taskUUID/all", async (res) => {
             where: {
                 taskId: task.id,
             },
-            include: { model: users, as: 'assignees', through: { attributes: [] } },
+            include: [
+                { model: subtasktags, as: 'subtasktags', through: { attributes: [] } },
+                { model: users, as: 'assignees', through: { attributes: [] } },
+            ]
         });
 
         return res.json({ res: subtasksData });

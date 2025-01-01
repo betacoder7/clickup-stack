@@ -1,6 +1,7 @@
 import { domain } from "../../../utilities/axios/adapter";
 
 export default function AssigneesProfilesRow({ maxLength, users, className, canRemove }) {
+
     const length = Math.min(users.length, maxLength);
     const remaining = users.length - length;
 

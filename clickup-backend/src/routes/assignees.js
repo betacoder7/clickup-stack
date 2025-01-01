@@ -24,6 +24,7 @@ app.post("/auth/task/:taskUUID/user/:uuid", async (res) => {
         const uuid = res.req.param("uuid");
 
         const task = await findOne(tasks, "uuid", taskUUID);
+        console.log(task, "task");
 
         if (task == null) {
             return res.json(errorBody("Task doesn't exists"), 404);;
@@ -54,7 +55,7 @@ app.post("/auth/task/:taskUUID/user/:uuid", async (res) => {
         return res.json({ res: data });
     }
     catch (e) {
-        logError(e.toString(), "/tags/auth/task/:taskUUID/user/:uuid", "POST");
+        logError(e.toString(), "/assignees/auth/task/:taskUUID/user/:uuid", "POST");
         return res.json(errorBody(e.message), 400);
     }
 });

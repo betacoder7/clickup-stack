@@ -19,10 +19,10 @@ app.use("*", bodyParser());
 /**
  * /auth/:listUUID - POST - create a task
  */
-app.post("/auth/:listUUID", async (req, res) => {
+app.post("/auth/:listUUID", async (res) => {
     try {
-        // const body = res.get("body");
-        const body = req.body;
+        const body = res.get("body");
+        // const body = req.body;
 
         nullCheck(body, {
             nonNullableFields: ['name'],
@@ -37,26 +37,12 @@ app.post("/auth/:listUUID", async (req, res) => {
             return res.json(errorBody("List doesn't exists"), 404);
         }
 
-        // const task = await tasks.create({
-        //     ...body,
-        //     listId: list.id,
-        // });
-
         const task = await tasks.create({
+            ...body,
             listId: list.id,
-            name: body.name,
-            description: body.description || null,
-            status: body.status || "TODO", // Default to "TODO" if status is not provided
-            dueDate: body.dueDate ? new Date(body.dueDate) : null,
-            startDate: body.startDate ? new Date(body.startDate) : null,
-            endDate: body.endDate ? new Date(body.endDate) : null,
-            timeTracked: body.timeTracked || null,
-            timeEstimate: body.timeEstimate || null,
-            totalTime: body.totalTime || null,
         });
 
-        console.log(body, "body");
-
+        // console.log(body, "body");
 
         return res.json({ res: task });
     }

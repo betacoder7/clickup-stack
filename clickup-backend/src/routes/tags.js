@@ -9,6 +9,8 @@ import { destroy, findOne, update } from "../global/functions/modelOperations";
 import { Hono } from "hono";
 import logError from "../global/functions/log";
 import { Op } from "sequelize";
+import subtasks from "../../models/subtasks";
+import subtasktag from "../../models/subtasktag";
 
 const app = new Hono();
 app.router = new RegExpRouter();
@@ -241,5 +243,85 @@ app.delete("/auth/task/:taskUUID/tag/:tagUUID", async (res) => {
         return res.json(errorBody(e.message), 400);
     }
 });
+
+/**
+ * /auth/task/:taskUUID/tag/:tagUUID - POST - add a tag in subtask
+ */
+app.post("/auth/subtask/:subtaskUUID/tag/:tagUUID", async (res) => {
+    try {
+        const subtaskUUID = res.req.param("subtaskUUID");
+        const tagUUID = res.req.param("tagUUID");
+
+        const subtask = await findOne(subtasks, "uuid", subtaskUUID);
+
+        if (subtask == null) {
+            return res.json(errorBody("SubTask doesn't exists"), 404);
+        }
+
+        const tag = await findOne(tags, "uuid", tagUUID);
+
+        if (tag == null) {
+            return res.json(errorBody("Tag doesn't exists"), 404);
+        }
+
+        const prevData = await subtasktag.findOne({
+            where: {
+                tagId: tag.id,
+                subtaskId: subtask.id,
+            }
+        });
+
+        if (prevData != null) {
+            return res.json(errorBody("Tag already exists"), 409);
+        }
+
+        const data = await subtasktag.create({
+            tagId: tag.id,
+            subtaskId: subtask.id,
+        });
+
+        return res.json({ res: data });
+    } catch (error) {
+        logError(e.toString(), "/tags/auth/subtask/:subtaskUUID/tag/:tagUUID", "POST");
+        return res.json(errorBody(e.message), 400);
+    }
+});
+
+/**
+ * /auth/task/:taskUUID/tag/:tagUUID - DELETE - remove a tag in subtask
+ */
+
+app.delete("/auth/subtask/:subtaskUUID/tag/:tagUUID", async (res) => {
+    try {
+        const subtaskUUID = res.req.param("subtaskUUID");
+        const tagUUID = res.req.param("tagUUID");
+
+        const subtask = await findOne(subtasks, "uuid", subtaskUUID);
+
+        if (subtask == null) {
+            return res.json(errorBody("SubTask doesn't exists"), 404);
+        }
+
+        const tag = await findOne(tags, "uuid", tagUUID);
+
+        if (tag == null) {
+            return res.json(errorBody("Tag doesn't exists"), 404);
+        }
+
+        await tasktags.destroy({
+            where: {
+                tagId: tag.id,
+                subtaskId: subtask.id,
+            }
+        });
+
+        return res.json({ res: "Tag removed" });
+    }
+    catch (e) {
+        logError(e.toString(), "/tags/auth/subtask/:subtaskUUID/tag/:tagUUID", "DELETE");
+        return res.json(errorBody(e.message), 400);
+    }
+});
+
 
 export default app;

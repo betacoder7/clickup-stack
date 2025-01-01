@@ -25,8 +25,10 @@ export default function Header() {
         <p className="text-white text-sm">ClickUp</p>
         <div className="flex gap-2">
             <PopUp
-                popoverButton={<ProfileAvatar className="h-7 w-7" user={userSlice} />}
-                child={<div className="flex flex-col gap-3 bg-slate-600 rounded-md p-3 w-full border-slate-500 border shadow-md shadow-slate-600">
+                popoverButton={<div className="flex items-center gap-1">
+                    <ProfileAvatar className="h-7 w-7" user={userSlice} />
+                </div>}
+                child={<div className="flex flex-col gap-3 bg-slate-600 rounded-md p-3 w-full h-auto border-slate-500 border shadow-md shadow-slate-600">
                     <div className="flex gap-2 items-center">
                         <ProfileAvatar className="h-9 w-9" user={userSlice} />
                         <div className="flex flex-col flex-grow text-white">
@@ -44,5 +46,31 @@ export default function Header() {
                 className="min-w-[300px]"
             />
         </div>
+        {/* <div className="h-9 flex items-center cursor-pointer hover:bg-slate-600 transition-all duration-200 ease-in-out rounded-lg px-2">
+            <PopUp
+                popoverButton={
+                    <div className="flex items-center gap-1">
+                        <ProfileAvatar className="h-7 w-7" user={userSlice} />
+                    </div>
+                }
+                className="bg-gray-700 left-0 w-[230px] rounded-primary flex flex-col"
+                child={<div className="flex flex-col gap-3 bg-slate-600 rounded-md p-3 w-full border-slate-500 border shadow-md shadow-slate-600">
+                    <div className="flex gap-2 items-center">
+                        <ProfileAvatar className="h-9 w-9" user={userSlice} />
+                        <div className="flex flex-col flex-grow text-white">
+                            <h3 className="font-medium text-sm">{userSlice.fullName}</h3>
+                            <h6 className="font-normal text-xs">{userSlice.email}</h6>
+                        </div>
+                    </div>
+                    <div className="border-b-1 border-slate-400" />
+
+                    <div className="flex flex-col">
+                        <PopoverItem label="Profile" icon={<UserIcon />} onClick={() => navigate("/profile")} />
+                        <PopoverItem label="Log out" icon={<ArrowRightStartOnRectangleIcon />} onClick={logOut} />
+                    </div>
+                </div>}
+                popOverButtonClassName="w-full"
+            />
+        </div> */}
     </div>;
 }

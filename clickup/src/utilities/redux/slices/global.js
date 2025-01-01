@@ -14,6 +14,10 @@ const globalSlice = createSlice({
     reducers: {
         update: (state, actions) => {
             const { key, action, value } = actions.payload;
+            // console.log(key, "key");
+            // console.log(action, "action");
+            // console.log(value, "value");
+
 
             switch (action) {
                 case "update":
