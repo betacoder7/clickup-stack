@@ -57,7 +57,7 @@ app.put("/auth/:subtaskUUID", async (res) => {
         const body = res.get("body");
 
         nullCheck(body, {
-            bothCannotBeNull: ['status', 'name', 'dueDate', 'startDate', 'endDate', 'timeTracked', 'timeEstimate'],
+            bothCannotBeNull: ['status', 'name',  'dueDate', 'description',  'startDate', 'endDate', 'timeTracked', 'timeEstimate'],
             mustBeNullFields: [...defaultNullFields, 'taskId'],
         });
 

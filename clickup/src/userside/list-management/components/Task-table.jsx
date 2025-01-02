@@ -9,7 +9,7 @@ import { useParams } from 'react-router-dom';
 import fetch from "../../../utilities/axios/manager";
 import { TagIcon } from '@heroicons/react/24/outline';
 import UpdateTagsDialog from '../../../global/components/popups/update-tags';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { toggleFetch } from '../../../utilities/redux/slices/tasks';
 
 import Assignee from "../../../assets/SVGs/assignees.svg";
@@ -21,15 +21,24 @@ import AuthButton from "../../auth/components/button";
 // import { useDispatch } from 'react-redux';
 
 import Subtask from './Subtask';
+import EditTask from './EditTask';
+// import { toggleFetchsubtask } from '../../../utilities/redux/slices/subtask';
 
 const TableTask = () => {
 
+    const { listUUID } = useParams();
+
+    const featchdata = useSelector(state => state.taskSlice.hasFetched);
+
+    const taskdataget = featchdata[listUUID];
+
+    console.log(taskdataget, "taskdataget");
 
     const dispatcher = useDispatch();
-    const { listUUID } = useParams();
     const [assignees, setAssignees] = useState([]);
     const [tags, setTags] = useState([]);
     const [listdata, setlistdata] = useState([]);
+    // const [subtask, setsubtask] = useState([]);
     const [error, setError] = useState(null);
     const [selectedTask, setSelectedTask] = useState(null);
 
@@ -48,12 +57,13 @@ const TableTask = () => {
         setlistdata([...tasksData["res"]]);
         // console.log(tasksData, "tasksData");
 
-        dispatcher(toggleFetch({ fetched: tasksData, listUUID: listUUID }));
+        dispatcher(toggleFetch({ fetched: tasksData["res"], listUUID: listUUID }));
     };
 
     useEffect(() => {
         fetchAlltask();
     }, [listUUID]);
+
 
     const handleRowClick = (task) => {
         setSelectedTask(task);
@@ -61,11 +71,44 @@ const TableTask = () => {
     const handleClosePopup = () => {
         setSelectedTask(null);
     };
-    function onAddTask(uuid ,id) {
-         dispatcher(Bigdialog.show({
-            child: <Subtask taskUUID={uuid} taskId={id}/>
+    function onAddTask(uuid, id) {
+        dispatcher(Bigdialog.show({
+            child: <Subtask taskUUID={uuid} taskId={id} />
         }));
     }
+
+
+    function onEditTask (task){
+        dispatcher(Bigdialog.show({
+            child:<EditTask task={task}/>
+        }))
+    }
+
+    // async function fetchAllSubtask() {
+    //     try {
+    //         for (const task of taskdataget) {
+    //             console.log(task.uuid, "task uuid");
+    //             const [subtaskResponse, errorSubtask] = await fetch({
+    //                 route: `/subtasks/auth/task/${task.uuid}/all`,
+    //                 requestType: "get",
+    //             });
+    //             if (errorSubtask) {
+    //                 setError(errorSubtask);
+    //                 return;
+    //             }
+    //             console.log(subtaskResponse['res'], "subtaskResponse");
+    //             setsubtask(subtaskResponse['res']);
+    //             dispatcher(toggleFetchsubtask({ fetched: subtask, taskUUID: task.uuid }));
+    //         }
+    //     } catch (e) {
+    //         setError(e.message);
+    //     }
+    // }
+    // const [expandedTaskId, setExpandedTaskId] = useState(null);
+    // const handleSubtaskToggle = (taskId) => {
+    //     setExpandedTaskId(expandedTaskId === taskId ? null : taskId);
+    // };
+    // console.log(subtask, "subtask ");
 
     return (
         <div>
@@ -112,35 +155,57 @@ const TableTask = () => {
                     </div>
                     <div className="pl-9 mb-3">
                         {error == null && <p className="text-xs text-red-500">{error}</p>}
+                        {/* <th className="p-2 text-center w-1/12">Toggle Subtasks</th> Add a column for the arrow */}
                         <table className="w-full text-sm text-left text-gray-500">
                             <thead className="border-b border-gray-500">
-                                <tr className=''>
-                                    <th className="p-2  text-start w-1/2">Name</th>
-                                    <th className="p-2  text-center w-1/12 ">Assignee</th>
-                                    <th className="p-2  text-center w-1/12 ">Due Date</th>
-                                    <th className="p-2  text-center w-1/12">Tags</th>
-                                    <th className="p-2  text-center w-1/12">Add Subtask</th>
+                                <tr>
+                                    {/* <th></th> */}
+                                    <th className="p-2 text-start w-1/3">Name</th>
+                                    <th className="p-2 text-center ">Assignee</th>
+                                    <th className="p-2 text-center ">Due Date</th>
+                                    <th className="p-2 text-center ">Tags</th>
+                                    <th className="p-2 text-center ">Edit</th>
+                                    <th className="p-2 text-center ">Add Subtask</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 {listdata.map((task, index) => (
                                     <React.Fragment key={index}>
-
-                                        <tr className="border-b border-gray-500 hover:bg-gray-700 group" >
-                                            <td className="p-2 w-1/2" onClick={() => handleRowClick(task)}>{task.name}</td>
-                                            <td className="">
+                                        <tr className="border-b  border-gray-500 hover:bg-gray-700 group">
+                                            {/* <div className="text-center ">
+                                                {task.subtasks && task.subtasks.length > 0 && (
+                                                    <button
+                                                        onClick={() => handleSubtaskToggle(task.id)}
+                                                        className="text-gray-400 hover:text-gray-600 flex items-center"
+                                                    >
+                                                        {expandedTaskId === task.id ? "↓" : "→"}
+                                                    </button>
+                                                )}
+                                            </div> */}
+                                            <td className="p-2 w-1/3" onClick={() => handleRowClick(task)}>
+                                                {task.name}
+                                            </td>
+                                            <td className=''>
                                                 <PopUp
                                                     className="bg-gray-700 left-0 w-[250px] rounded-primary flex flex-col"
                                                     popoverButton={
-                                                        <div className="rounded-md h-7  px-2 flex items-center justify-center cursor-pointer gap-1">
+                                                        <div className="rounded-md h-7 px-2 flex items-center justify-center cursor-pointer gap-1">
                                                             {task.assignees.length === 0 ? (
                                                                 <>
-                                                                    <img src={Assignee} alt="assignee" className="aspect-square h-3 w-3 object-contain" />
+                                                                    <img
+                                                                        src={Assignee}
+                                                                        alt="assignee"
+                                                                        className="aspect-square h-3 w-3 object-contain"
+                                                                    />
                                                                     <p className="text-xs text-gray-100">Assignee</p>
                                                                 </>
-                                                            ) :
-                                                                <AssigneesProfilesRow className="h-[14px] w-[14px] !border-none" users={task.assignees} maxLength={3} />
-                                                            }
+                                                            ) : (
+                                                                <AssigneesProfilesRow
+                                                                    className="h-[14px] w-[14px] !border-none"
+                                                                    users={task.assignees}
+                                                                    maxLength={3}
+                                                                />
+                                                            )}
                                                         </div>
                                                     }
                                                     child={
@@ -149,43 +214,73 @@ const TableTask = () => {
                                                             assignees={assignees}
                                                             onAdd={(assignee) => setAssignees([...assignees, assignee])}
                                                             onRemove={(assignee) => {
-                                                                const arr = assignees.filter(item => item.uuid !== assignee.uuid);
+                                                                const arr = assignees.filter((item) => item.uuid !== assignee.uuid);
                                                                 setAssignees([...arr]);
                                                             }}
                                                         />
                                                     }
                                                 />
                                             </td>
-                                            <td className="">
-                                                <PopUp className="bg-gray-700 left-0 w-[350px] rounded-primary flex flex-col p-5"
-                                                    popoverButton={<div className="rounded-md h-7  px-2 flex items-center justify-center cursor-pointer gap-1">
-                                                        <p className="text-sm text-gray-500 "> {new Date(task.dueDate).toLocaleDateString()}</p>
-                                                    </div>} child={<SingleDatePicker />}
+                                            <td>
+                                                <PopUp
+                                                    className="bg-gray-700 left-0 w-[350px] rounded-primary flex flex-col p-5"
+                                                    popoverButton={
+                                                        <div className="rounded-md h-7 px-2 flex items-center justify-center cursor-pointer gap-1">
+                                                            <p className="text-sm text-gray-500">
+                                                                {new Date(task.dueDate).toLocaleDateString()}
+                                                            </p>
+                                                        </div>
+                                                    }
+                                                    child={<SingleDatePicker />}
                                                 />
                                             </td>
-                                            <td className=''>
-                                                <PopUp className="bg-gray-700 left-0 w-[250px] rounded-primary flex flex-col"
-                                                    popoverButton={<div className="rounded-md h-7 px-2 flex items-center justify-center cursor-pointer gap-1">
-                                                        <TagIcon className="aspect-square h-3 w-3 object-contain" />
-                                                        <p className="text-xs text-gray-100">{tags.length === 0 ? `${task.tags.map((value, index) => value.name)}` : `${tags.length} ${tags.length === 1 ? "tag" : "tags"}`}</p>
-                                                    </div>} child={<UpdateTagsDialog name="tags" onAdd={(tag) => setTags([...tags, tag])} tags={tags} onRemove={(tag) => {
-                                                        const arr = tags.filter(item => item.uuid !== tag.uuid);
-                                                        setTags([...arr]);
-                                                    }} />}
+                                            <td>
+                                                <PopUp
+                                                    className="bg-gray-700 left-0 w-[250px] rounded-primary flex flex-col"
+                                                    popoverButton={
+                                                        <div className="rounded-md h-7 px-2 flex items-center justify-center cursor-pointer gap-1">
+                                                            <TagIcon className="aspect-square h-3 w-3 object-contain" />
+                                                            <p className="text-xs text-gray-100">
+                                                                {tags.length === 0
+                                                                    ? `${task.tags.map((value, index) => value.name)}`
+                                                                    : `${task.tags.length} ${tags.length === 1 ? "tag" : "tags"}`}
+                                                            </p>
+                                                        </div>
+                                                    }
+                                                    child={
+                                                        < UpdateTagsDialog
+                                                            name="tags"
+                                                            task={task} 
+                                                            onAdd={(tag) => setTags([...tags, tag])}
+                                                            tags={tags}
+                                                            onRemove={(tag) => {
+                                                                const arr = tags.filter((item) => item.uuid !== tag.uuid);
+                                                                setTags([...arr]);
+                                                            }}
+                                                        />
+                                                    }
                                                 />
                                             </td>
                                             <td className="text-center">
-                                                {/* <div className="flex justify-between items-center w-full">
-                                                    <h1 className="font-semibold text-md">{`${taskUUID == null ? "Create" : "Update"} a task`}</h1>
-                                                    <IconButton className="h7 w-7 p-1" onClick={() => dispatcher(BigDialogSlice.hide())} icon={<XMarkIcon className="h-full w-full" />} />
-                                                </div> */}
-                                                <AuthButton onClick={ () => onAddTask(task.uuid ,task.id)} type="button" value="Add SubTask" />
+                                                <AuthButton
+                                                    onClick={() => onEditTask(task)}
+                                                    type="button"
+                                                    value="Edit"
+                                                />
+                                            </td>
+                                            <td className="text-center">
+                                                <AuthButton
+                                                    onClick={() => onAddTask(task.uuid, task.id)}
+                                                    type="button"
+                                                    value="Add SubTask"
+                                                />
                                             </td>
                                         </tr>
                                     </React.Fragment>
                                 ))}
                             </tbody>
                         </table>
+
                     </div>
                     <Taskaddrow />
                 </div>
@@ -201,4 +296,20 @@ const TableTask = () => {
 };
 export default TableTask;
 
-
+//   {/* Conditionally render subtask list */}
+//                                         {/* {expandedTaskId === task.id && task.subtasks && task.subtasks.length > 0 && (
+//                                             <tr>
+//                                                 <td colSpan="6" className="bg-gray-800 p-4">
+//                                                     <div>
+//                                                         <h3 className="text-white">Subtasks for {task.name}</h3>
+//                                                         <ul className="text-gray-400">
+//                                                             {task.subtasks.map((subtask, subtaskIndex) => (
+//                                                                 <li key={subtaskIndex} className="py-1">
+//                                                                     {subtask.name}
+//                                                                 </li>
+//                                                             ))}
+//                                                         </ul>
+//                                                     </div>
+//                                                 </td>
+//                                             </tr>
+//                                         )} */}

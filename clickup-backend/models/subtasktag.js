@@ -18,3 +18,6 @@ module.exports = (sequelize, DataTypes) => {
     });
     return subtasktags;
 };
+
+
+

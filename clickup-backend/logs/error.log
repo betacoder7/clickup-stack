@@ -108,3 +108,273 @@ notNull Violation: microtaskassigns.microtaskId cannot be null
 17:38:32 GMT+0530 (India Standard Time) - /subtasks/auth/:taskUUID - POST - Error: Found empty body
 17:41:41 GMT+0530 (India Standard Time) - /subtasks/auth/:taskUUID - POST - Error: Found empty body
 17:41:41 GMT+0530 (India Standard Time) - /subtasks/auth/:taskUUID - POST - Error: Found empty body
+12:46:56 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+12:46:56 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+12:46:56 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+12:46:56 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+12:46:56 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+12:46:56 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+12:46:56 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+12:46:56 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+12:46:56 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+12:46:56 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+12:46:56 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+12:46:56 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+12:46:56 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+12:46:56 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+12:46:56 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+12:46:56 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+12:46:56 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+12:46:56 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+12:46:56 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+12:46:56 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+12:46:56 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+12:46:56 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+12:48:17 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+12:48:17 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+12:48:17 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+12:48:17 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+12:48:17 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+12:48:17 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+12:48:17 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+12:48:17 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+12:48:17 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+12:48:17 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+12:48:17 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+12:48:18 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+12:48:18 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+12:48:18 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+12:48:18 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+12:48:18 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+12:48:18 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+12:48:18 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+12:48:18 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+12:48:18 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+12:48:18 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+12:48:18 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+12:54:26 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+12:54:26 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+12:54:26 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+12:54:26 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+12:54:26 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+12:54:26 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+12:54:26 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+12:54:26 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+12:54:26 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+12:54:26 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+12:54:26 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:08:38 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:08:38 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:08:38 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:08:38 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:08:38 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:08:38 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:08:38 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:08:38 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:08:38 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:08:38 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:08:38 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:13:30 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:13:30 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:13:30 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:13:30 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:13:30 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:13:30 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:13:30 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:13:30 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:13:30 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:13:30 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:13:30 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:13:51 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:13:51 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:13:51 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:13:51 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:13:51 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:13:51 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:13:51 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:13:51 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:13:51 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:13:51 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:13:51 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:18:53 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:18:53 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:18:53 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:18:53 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:18:53 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:18:53 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:18:53 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:18:53 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:18:53 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:18:53 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:18:53 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:22:31 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:22:31 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:22:31 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:22:32 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:22:32 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:22:32 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:22:32 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:22:32 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:22:32 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:22:32 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:22:32 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:22:32 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:22:32 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:22:32 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:22:32 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:22:32 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:22:32 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:22:32 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:22:32 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:22:32 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:22:32 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:22:32 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:23:51 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:23:51 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:23:51 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:23:51 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:23:51 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:23:51 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:23:51 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:23:51 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:23:51 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:23:51 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:23:51 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:23:53 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:23:53 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:23:53 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:23:53 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:23:53 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:23:53 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:23:53 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:23:53 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:23:53 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:23:53 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:23:53 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:41:32 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:41:33 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:43:28 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:43:30 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+13:45:40 GMT+0530 (India Standard Time) - /subtasks/auth/:taskUUID - POST - SequelizeDatabaseError: Unknown column 'description' in 'field list'
+13:46:44 GMT+0530 (India Standard Time) - /subtasks/auth/:taskUUID - POST - SequelizeDatabaseError: Unknown column 'description' in 'field list'
+13:48:18 GMT+0530 (India Standard Time) - /subtasks/auth/:taskUUID - POST - SequelizeDatabaseError: Unknown column 'description' in 'field list'
+13:49:51 GMT+0530 (India Standard Time) - /subtasks/auth/:taskUUID - POST - SequelizeDatabaseError: Unknown column 'description' in 'field list'
+14:01:41 GMT+0530 (India Standard Time) - /subtasks/auth/:taskUUID - POST - SequelizeValidationError: notNull Violation: subtasks.description cannot be null
+14:02:51 GMT+0530 (India Standard Time) - /subtasks/auth/:taskUUID - POST - SequelizeValidationError: notNull Violation: subtasks.description cannot be null
+14:04:12 GMT+0530 (India Standard Time) - /subtasks/auth/:taskUUID - POST - SequelizeValidationError: notNull Violation: subtasks.description cannot be null
+14:06:03 GMT+0530 (India Standard Time) - /subtasks/auth/:taskUUID - POST - SequelizeValidationError: notNull Violation: subtasks.description cannot be null
+14:07:33 GMT+0530 (India Standard Time) - /subtasks/auth/:taskUUID - POST - SequelizeDatabaseError: Unknown column 'description' in 'field list'
+14:08:22 GMT+0530 (India Standard Time) - /subtasks/auth/:taskUUID - POST - SequelizeValidationError: notNull Violation: subtasks.description cannot be null
+14:08:32 GMT+0530 (India Standard Time) - /subtasks/auth/:taskUUID - POST - SequelizeValidationError: notNull Violation: subtasks.description cannot be null
+14:08:51 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+14:08:53 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+14:09:04 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+14:09:14 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+14:09:15 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+14:10:44 GMT+0530 (India Standard Time) - /subtasks/auth/:taskUUID - POST - SequelizeDatabaseError: Unknown column 'description' in 'field list'
+14:11:06 GMT+0530 (India Standard Time) - /subtasks/auth/:taskUUID - POST - SequelizeValidationError: notNull Violation: subtasks.description cannot be null
+14:11:39 GMT+0530 (India Standard Time) - /subtasks/auth/:taskUUID - POST - SequelizeValidationError: notNull Violation: subtasks.description cannot be null
+14:12:56 GMT+0530 (India Standard Time) - /subtasks/auth/:taskUUID - POST - SequelizeDatabaseError: Unknown column 'description' in 'field list'
+14:13:22 GMT+0530 (India Standard Time) - /subtasks/auth/:taskUUID - POST - SequelizeValidationError: notNull Violation: subtasks.description cannot be null
+14:13:33 GMT+0530 (India Standard Time) - /subtasks/auth/:taskUUID - POST - SequelizeValidationError: notNull Violation: subtasks.description cannot be null
+14:14:33 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+14:15:22 GMT+0530 (India Standard Time) - /subtasks/auth/:taskUUID - POST - SequelizeValidationError: notNull Violation: subtasks.description cannot be null
+14:15:43 GMT+0530 (India Standard Time) - /subtasks/auth/:taskUUID - POST - SequelizeDatabaseError: Unknown column 'description' in 'field list'
+14:16:02 GMT+0530 (India Standard Time) - /subtasks/auth/:taskUUID - POST - SequelizeValidationError: notNull Violation: subtasks.description cannot be null
+14:16:16 GMT+0530 (India Standard Time) - /subtasks/auth/:taskUUID - POST - SequelizeValidationError: notNull Violation: subtasks.description cannot be null
+14:17:03 GMT+0530 (India Standard Time) - /subtasks/auth/:taskUUID - POST - SequelizeValidationError: notNull Violation: subtasks.description cannot be null
+14:18:00 GMT+0530 (India Standard Time) - /subtasks/auth/:taskUUID - POST - SequelizeValidationError: notNull Violation: subtasks.description cannot be null
+14:20:42 GMT+0530 (India Standard Time) - /subtasks/auth/:taskUUID - POST - SequelizeValidationError: notNull Violation: subtasks.description cannot be null
+14:21:05 GMT+0530 (India Standard Time) - /subtasks/auth/:taskUUID - POST - SequelizeValidationError: notNull Violation: subtasks.description cannot be null
+14:21:08 GMT+0530 (India Standard Time) - /subtasks/auth/:taskUUID - POST - SequelizeValidationError: notNull Violation: subtasks.description cannot be null
+14:21:38 GMT+0530 (India Standard Time) - /subtasks/auth/:taskUUID - POST - SequelizeValidationError: notNull Violation: subtasks.description cannot be null
+14:22:15 GMT+0530 (India Standard Time) - /subtasks/auth/:taskUUID - POST - SequelizeValidationError: notNull Violation: subtasks.description cannot be null
+14:22:17 GMT+0530 (India Standard Time) - /subtasks/auth/:taskUUID - POST - SequelizeValidationError: notNull Violation: subtasks.description cannot be null
+14:22:18 GMT+0530 (India Standard Time) - /subtasks/auth/:taskUUID - POST - SequelizeValidationError: notNull Violation: subtasks.description cannot be null
+14:22:19 GMT+0530 (India Standard Time) - /subtasks/auth/:taskUUID - POST - SequelizeValidationError: notNull Violation: subtasks.description cannot be null
+14:22:20 GMT+0530 (India Standard Time) - /subtasks/auth/:taskUUID - POST - SequelizeValidationError: notNull Violation: subtasks.description cannot be null
+14:22:51 GMT+0530 (India Standard Time) - /subtasks/auth/:taskUUID - POST - SequelizeValidationError: notNull Violation: subtasks.description cannot be null
+14:24:16 GMT+0530 (India Standard Time) - /subtasks/auth/:taskUUID - POST - SequelizeValidationError: notNull Violation: subtasks.description cannot be null
+14:25:34 GMT+0530 (India Standard Time) - /subtasks/auth/:taskUUID - POST - SequelizeValidationError: notNull Violation: subtasks.description cannot be null
+14:25:36 GMT+0530 (India Standard Time) - /subtasks/auth/:taskUUID - POST - SequelizeValidationError: notNull Violation: subtasks.description cannot be null
+11:36:36 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+11:37:16 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+11:37:19 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+11:37:24 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+11:38:10 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+11:38:12 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+11:38:13 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+11:38:17 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+11:38:24 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+11:38:28 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+11:38:31 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+11:38:33 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+11:48:16 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+11:48:26 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+11:48:27 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+11:48:31 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+11:48:32 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+11:48:34 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+11:48:39 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+11:51:50 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+11:52:46 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+12:37:00 GMT+0530 (India Standard Time) - /tags/auth/subtask/:subtaskUUID/tag/:tagUUID - POST - TypeError: model.findOne is not a function. (In 'model.findOne({
+    where: {
+      [key]: value
+    }
+  })', 'model.findOne' is undefined)
+12:39:51 GMT+0530 (India Standard Time) - /tags/auth/subtask/:subtaskUUID/tag/:tagUUID - POST - TypeError: model.findOne is not a function. (In 'model.findOne({
+    where: {
+      [key]: value
+    }
+  })', 'model.findOne' is undefined)
+12:46:18 GMT+0530 (India Standard Time) - /tags/auth/subtask/:subtaskUUID/tag/:tagUUID - POST - TypeError: model.findOne is not a function. (In 'model.findOne({
+    where: {
+      [key]: value
+    }
+  })', 'model.findOne' is undefined)
+12:51:20 GMT+0530 (India Standard Time) - /tags/auth/subtask/:subtaskUUID/tag/:tagUUID - POST - TypeError: model.findOne is not a function. (In 'model.findOne({
+    where: {
+      [key]: value
+    }
+  })', 'model.findOne' is undefined)
+13:18:02 GMT+0530 (India Standard Time) - /tags/auth/subtask/:subtaskUUID/tag/:tagUUID - POST - TypeError: model.findOne is not a function. (In 'model.findOne({
+    where: {
+      [key]: value
+    }
+  })', 'model.findOne' is undefined)
+13:18:02 GMT+0530 (India Standard Time) - /tags/auth/subtask/:subtaskUUID/tag/:tagUUID - POST - TypeError: model.findOne is not a function. (In 'model.findOne({
+    where: {
+      [key]: value
+    }
+  })', 'model.findOne' is undefined)
+13:27:11 GMT+0530 (India Standard Time) - /tags/auth/subtask/:subtaskUUID/tag/:tagUUID - POST - TypeError: model.findOne is not a function. (In 'model.findOne({
+    where: {
+      [key]: value
+    }
+  })', 'model.findOne' is undefined)
+13:27:11 GMT+0530 (India Standard Time) - /tags/auth/subtask/:subtaskUUID/tag/:tagUUID - POST - TypeError: model.findOne is not a function. (In 'model.findOne({
+    where: {
+      [key]: value
+    }
+  })', 'model.findOne' is undefined)
+13:28:28 GMT+0530 (India Standard Time) - /tags/auth/subtask/:subtaskUUID/tag/:tagUUID - POST - TypeError: model.findOne is not a function. (In 'model.findOne({
+    where: {
+      [key]: value
+    }
+  })', 'model.findOne' is undefined)
+13:37:23 GMT+0530 (India Standard Time) - /tags/auth/subtask/:subtaskUUID/tag/:tagUUID - POST - TypeError: model.findOne is not a function. (In 'model.findOne({
+    where: {
+      [key]: value
+    }
+  })', 'model.findOne' is undefined)
+13:41:21 GMT+0530 (India Standard Time) - /tags/auth/subtask/:subtaskUUID/tag/:tagUUID - POST - TypeError: model.findOne is not a function. (In 'model.findOne({
+    where: {
+      [key]: value
+    }
+  })', 'model.findOne' is undefined)
+16:01:37 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+16:01:46 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+16:01:46 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+16:02:19 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+16:03:56 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!

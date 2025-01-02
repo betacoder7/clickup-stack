@@ -17,7 +17,7 @@ import PickAssignees from '../../../global/components/popups/pick-assignees';
 
 
 const Taskpopup = ({ task, onClose }) => {
-    // console.log(task, "task");
+    console.log(task, "task");
 
     const { listUUID } = useParams();
     const tasks = useSelector(state => state.taskSlice.tasks[listUUID]);
@@ -59,7 +59,7 @@ const Taskpopup = ({ task, onClose }) => {
             <div className="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-75 z-50 ">
                 <div className="bg-black w-3/4  p-6 rounded-lg  overflow-auto">
                     <div className="flex justify-between items-center mb-6">
-                        <h1 className="text-xl text-white font-bold">Healthdiem app UI design screen (52hr 35min)</h1>
+                        <h1 className="text-xl text-white font-bold">{task.description} ({task.totalTime})</h1>
                         <button
                             className="text-white text-2xl font-bold"
                             onClick={onClose}
@@ -71,7 +71,7 @@ const Taskpopup = ({ task, onClose }) => {
                         {/* Left Section */}
                         <div className="col-span-2 space-y-4 mb-10">
                             <div className='mx-auto p-3 gap-2'>
-                                <h1 className='font-sans text-2xl'>{task.name} ({"task total time"})</h1>
+                                <h1 className='font-sans text-2xl'>{task.name}</h1>
 
                                 <div className='grid grid-cols-2 gap-5'>
                                     <div>

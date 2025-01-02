@@ -23,8 +23,8 @@ module.exports = (sequelize, DataTypes) => {
   subtasks.init({
     taskId: { type: DataTypes.INTEGER, allowNull: false },
     status: { type: DataTypes.STRING, allowNull: false, defaultValue: "TODO" },
-    description: { type: DataTypes.STRING, allowNull: true },
     name: { type: DataTypes.STRING, allowNull: false },
+    description: { type: DataTypes.STRING, allowNull: true },
     dueDate: { type: DataTypes.DATE, allowNull: true },
     startDate: { type: DataTypes.DATE, allowNull: true },
     endDate: { type: DataTypes.DATE, allowNull: true },

@@ -7,7 +7,7 @@ import { PlusIcon } from "@heroicons/react/24/outline";
 import AddTagDialog from "./create-tag";
 import PopUp from "../dialog/popup";
 
-export default function UpdateTagsDialog({ onAdd, onRemove, tags }) {
+export default function UpdateTagsDialog({ onAdd, onRemove, tags ,task}) {
     const globalSlice = useSelector(state => state.globalSlice);
     const workspaceUUID = globalSlice.defaultWorkspaceUUID;
 

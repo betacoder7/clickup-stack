@@ -3,14 +3,14 @@ import bodyParser from "../global/middlewares/bodyparser";
 
 import { nullCheck, defaultNullFields } from "../global/validations/nullCheck";
 import { errorBody } from "../global/functions/errorBody";
-import { tags, tasktags, workspaces, tasks } from "../../models";
+import { tags, tasktags, workspaces, tasks, subtasks, subtasktag } from "../../models";
 import Jwt from "../global/middlewares/jwt";
 import { destroy, findOne, update } from "../global/functions/modelOperations";
 import { Hono } from "hono";
 import logError from "../global/functions/log";
 import { Op } from "sequelize";
-import subtasks from "../../models/subtasks";
-import subtasktag from "../../models/subtasktag";
+// import subtasks from "../../models/subtasks";
+// import subtasktag from "../../models/subtasktag";
 
 const app = new Hono();
 app.router = new RegExpRouter();
@@ -252,6 +252,9 @@ app.post("/auth/subtask/:subtaskUUID/tag/:tagUUID", async (res) => {
         const subtaskUUID = res.req.param("subtaskUUID");
         const tagUUID = res.req.param("tagUUID");
 
+        console.log(subtaskUUID, tagUUID, "tagUUIDtagUUIDtagUUIDtagUUIDtagUUID");
+
+
         const subtask = await findOne(subtasks, "uuid", subtaskUUID);
 
         if (subtask == null) {
@@ -281,7 +284,7 @@ app.post("/auth/subtask/:subtaskUUID/tag/:tagUUID", async (res) => {
         });
 
         return res.json({ res: data });
-    } catch (error) {
+    } catch (e) {
         logError(e.toString(), "/tags/auth/subtask/:subtaskUUID/tag/:tagUUID", "POST");
         return res.json(errorBody(e.message), 400);
     }

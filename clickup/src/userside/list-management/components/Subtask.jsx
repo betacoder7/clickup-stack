@@ -3,7 +3,7 @@ import Commantaskfrom from './Commantaskfrom';
 import IconButton from '../../dashboard/components/icon-button';
 import { useDispatch } from 'react-redux';
 import { XMarkIcon } from '@heroicons/react/24/outline';
-import * as BigDialogSlice from "../../../utilities/redux/slices/bigdialog";
+import * as Bigdialog from "../../../utilities/redux/slices/bigdialog";
 import * as LoadingBar from "../../../utilities/redux/slices/toploading-bar";
 
 import * as Yup from "yup";
@@ -45,14 +45,14 @@ const Subtask = ({ taskUUID, taskId }) => {
             description: Yup.string().required("Required")
         }),
         onSubmit: async (values) => {
-            // console.log('Form Submitted:', values);
-            await createTask();
+            console.log('Form Submitted:', values);
+            await createsubTask();
+
         },
     });
 
-    let subtaskUUID;
 
-    async function createTask() {
+    async function createsubTask() {
         dispatcher(LoadingBar.setProgress(50));
 
         const body = {
@@ -67,6 +67,9 @@ const Subtask = ({ taskUUID, taskId }) => {
             timeEstimate: formik.values.timeEstimate,
         };
 
+        console.log(body, "body");
+
+
         const [subtaskData, subtaskError] = await fetch({
             route: `/subtasks/auth/${taskUUID}`,
             requestType: "post",
@@ -74,26 +77,17 @@ const Subtask = ({ taskUUID, taskId }) => {
         });
 
         if (subtaskError != null) {
-            return onError(subtaskError, createTask);
+            return onError(subtaskError, createsubTask);
         }
 
-        console.log(subtaskData, "task Date");
+        console.log(subtaskData["res"], "task Date");
+
 
         const createsubtaskID = subtaskData["res"];
-        subtaskUUID = createsubtaskID.uuid;
+        let subtaskUUID = createsubtaskID.uuid;
 
-        dispatcher(LoadingBar.setProgress(100));
+        console.log(subtaskUUID, "subtaskUUID");
 
-        dispatcher(SubtaskSlice.add({ subtask: subtaskData["res"], taskUUID: listUUID }));
-
-
-        subtaskassignee();
-        subtasktag();
-
-        dispatcher(BigDialogSlice.hide());
-    }
-
-    async function subtaskassignee() {
 
         assignees.map(async (value) => {
             console.log(value.uuid, "value.uuid");
@@ -104,39 +98,38 @@ const Subtask = ({ taskUUID, taskId }) => {
             });
 
             if (subtaskassigneeError != null) {
-                return onError(subtaskassigneeData, subtaskassignee);
+                return onError(subtaskassigneeError, createsubTask);
             }
+
+            console.log(subtaskassigneeData, "subtaskassignees");
 
             if (subtaskassigneeData) {
-                dispatcher(addAssignsubtask({ subtaskUUID: subtaskUUID, userUUID: value.uuid, assignment: subtaskassigneeData }));
+                dispatcher(addAssignsubtask({ subtaskUUID: subtaskUUID, userUUID: value.uuid, assignment: subtaskassigneeData['res'] }));
             }
         });
 
+
+        // tags.map(async (value, index) => {
+        //     console.log(value.uuid, "tag uuid");
+        //     const[subtasktagdata , Errorsubtasktag] = await fetch({
+        //         route:`/tags/auth/subtask/${subtaskUUID}/tag/${value.uuid}`,
+        //         requestType:"post",
+        //     })
+        //         console.log(`/tags/auth/subtask/${subtaskUUID}/tag/${value.uuid}`, " url");
+        //     if (Errorsubtasktag != null) {
+        //         return onError(Errorsubtasktag, createsubTask);
+        //     }
+        //     console.log(subtasktagdata, "subtasktag");
+        //     if (subtasktagdata) {
+        //         dispatcher(addtagsubtask({ subtaskUUID: subtaskUUID, tagUUID: value.uuid, tags: subtasktagdata['res'] }));
+        //     }
+        // });
+
+        dispatcher(LoadingBar.setProgress(100));
+        dispatcher(SubtaskSlice.add({ subtask: subtaskData["res"], taskUUID: listUUID }));
+        dispatcher(Bigdialog.hide());
+
     }
-
-    // subtaskassignee();
-
-    async function subtasktag() {
-        tags.map(async (value, index) => {
-            console.log(value.uuid, "tag uuid");
-
-            const [subtasktag, subtasktagError] = await fetch({
-                route: `/tags/auth/subtask/${subtaskUUID}/tag/${value.uuid}`,
-                requestType: "post",
-            });
-
-            if (subtasktagError != null) {
-                return onError(subtasktagError, subtasktag);
-            }
-
-            if (subtasktag) {
-                dispatcher(addtagsubtask({ subtaskUUID: subtaskUUID, tagUUID: value.uuid, tags: subtasktag }));
-            }
-        });
-    }
-
-    // subtasktag();
-
 
     function onError(error, onRetry) {
         dispatcher(LoadingBar.setProgress(100));
@@ -159,7 +152,7 @@ const Subtask = ({ taskUUID, taskId }) => {
             <div className="flex flex-col gap-5 text-white">
                 <div className="flex justify-between items-center w-full">
                     <h1 className="font-semibold text-md">SubTask</h1>
-                    <IconButton className="h7 w-7 p-1" onClick={() => dispatcher(BigDialogSlice.hide())} icon={<XMarkIcon className="h-full w-full" />} />
+                    <IconButton className="h7 w-7 p-1" onClick={() => dispatcher(Bigdialog.hide())} icon={<XMarkIcon className="h-full w-full" />} />
                 </div>
                 <Commantaskfrom
                     formik={formik}

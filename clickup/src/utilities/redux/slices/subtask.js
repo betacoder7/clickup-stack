@@ -9,7 +9,7 @@ const subtaskSlice = createSlice({
     name: 'subtaskSlice',
     initialState: initialData,
     reducers: {
-        add: (state, action) => {
+        addsubtask: (state, action) => {
             const { subtask, taskUUID } = action.payload;
 
             state.subtasks = {
@@ -21,12 +21,12 @@ const subtaskSlice = createSlice({
             state.subtaskIds[taskUUID].push(subtask.uuid);
         },
 
-        toggleFetch: (state, action) => {
+        toggleFetchsubtask: (state, action) => {
             const { fetched, taskUUID } = action.payload;
             state.hasFetched[taskUUID] = fetched;
         },
 
-        updata: (state, action) => {
+        updatasubtask: (state, action) => {
             const subtask = action.payload.subtask;
 
             state.suntasks = {
@@ -35,7 +35,7 @@ const subtaskSlice = createSlice({
             };
         },
 
-        remove: (state, action) => {
+        removesubtask: (state, action) => {
             const { subtask, taskUUID } = action.payload;
 
             delete state.subtasks[subtask.uuid];
@@ -43,7 +43,7 @@ const subtaskSlice = createSlice({
 
             state.subtaskIds[taskUUID] = state.subtaskIds[taskUUID].filter(item => item !== subtask.uuid);
         },
-        clear: (state, action) => {
+        clearsubtask: (state, action) => {
             state.subtasks = {};
             state.subtaskIds = {};
             state.hasFetched = {};
@@ -52,5 +52,5 @@ const subtaskSlice = createSlice({
 });
 
 
-export const { add, toggleFetch, updata, remove, clear } = subtaskSlice.actions;
+export const { addsubtask, toggleFetchsubtask, updatasubtask, removesubtask, clearsubtask } = subtaskSlice.actions;
 export default subtaskSlice.reducer;
