@@ -3,39 +3,40 @@ import { IconButton } from '@mui/material';
 import { Taskaddrow } from './Task-add-row';
 import PopUp from '../../../global/components/dialog/popup';
 import AssigneesProfilesRow from './assignees-profiles-row';
-import PickAssignees from '../../../global/components/popups/pick-assignees';
+// import PickAssignees from '../../../global/components/popups/pick-assignees';
 import SingleDatePicker from '../../../global/components/popups/single-date-picker';
 import { useParams } from 'react-router-dom';
 import fetch from "../../../utilities/axios/manager";
 import { TagIcon } from '@heroicons/react/24/outline';
-import UpdateTagsDialog from '../../../global/components/popups/update-tags';
+// import UpdateTagsDialog from '../../../global/components/popups/update-tags';
 import { useDispatch, useSelector } from 'react-redux';
 import { toggleFetch } from '../../../utilities/redux/slices/tasks';
 
 import Assignee from "../../../assets/SVGs/assignees.svg";
+import Stopwatch from "../../../assets/SVGs/stopwatch.svg";
 import Taskpopup from './Task-popup';
 import * as Bigdialog from "../../../utilities/redux/slices/bigdialog";
 import AuthButton from "../../auth/components/button";
 
-
+import { useFormik } from "formik";
 // import { useDispatch } from 'react-redux';
 
 import Subtask from './Subtask';
-import EditTask from './EditTask';
+// import EditTask from './EditTask';
+import UpdateTaskDialog from './update-task';
 // import { toggleFetchsubtask } from '../../../utilities/redux/slices/subtask';
 
 const TableTask = () => {
 
     const { listUUID } = useParams();
 
-    const featchdata = useSelector(state => state.taskSlice.hasFetched);
+    // const featchdata = useSelector(state => state.taskSlice.hasFetched);
+    // const taskdataget = featchdata[listUUID];
 
-    const taskdataget = featchdata[listUUID];
-
-    console.log(taskdataget, "taskdataget");
+    // console.log(taskdataget, "taskdataget");
 
     const dispatcher = useDispatch();
-    const [assignees, setAssignees] = useState([]);
+    // const [assignees, setAssignees] = useState([]);
     const [tags, setTags] = useState([]);
     const [listdata, setlistdata] = useState([]);
     // const [subtask, setsubtask] = useState([]);
@@ -78,10 +79,15 @@ const TableTask = () => {
     }
 
 
-    function onEditTask (task){
+    function onEditTask(e, taskUUID) {
+        console.log(taskUUID, "taskUUIDtaskUUIDtaskUUID table");
+        console.log(listUUID, "listUUIDlistUUIDlistUUID table");
+
+
+        e.stopPropagation();
         dispatcher(Bigdialog.show({
-            child:<EditTask task={task}/>
-        }))
+            child: <UpdateTaskDialog taskUUID={taskUUID} listUUID={listUUID} />
+        }));
     }
 
     // async function fetchAllSubtask() {
@@ -110,6 +116,73 @@ const TableTask = () => {
     // };
     // console.log(subtask, "subtask ");
 
+
+
+
+    const formik = useFormik({
+        initialValues: {
+            timeTracked: null,
+        },
+        // onSubmit: onSubmit,
+    });
+
+    const [startTime, setStartTime] = useState("");
+    const [endTime, setEndTime] = useState("");
+
+    useEffect(() => {
+        if (startTime && endTime) {
+            calculateDuration();
+        }
+    }, [startTime, endTime]);
+
+    const calculateDuration = (start, end) => {
+        if (start && end) {
+            const startTime = new Date(`1970-01-01T${start}:00`);
+            let endTime = new Date(`1970-01-01T${end}:00`);
+
+            // Handle next-day scenario
+            if (endTime <= startTime) {
+                endTime.setDate(endTime.getDate() + 1);
+            }
+
+            const diff = (endTime - startTime) / 1000;
+            const hours = Math.floor(diff / 3600);
+            const minutes = Math.floor((diff % 3600) / 60);
+            const duration = `${hours}h ${minutes}m`;
+
+            // Update formik value for timeTracked
+            formik.setFieldValue("timeTracked", duration);
+        }
+    };
+
+    const [isRunning, setIsRunning] = useState(false);
+    const [time, setTime] = useState(0);
+
+    useEffect(() => {
+        let timer;
+        if (isRunning) {
+            timer = setInterval(() => {
+                setTime((prevTime) => prevTime + 1);
+            }, 1000);
+        } else {
+            clearInterval(timer);
+        }
+        return () => clearInterval(timer);
+    }, [isRunning]);
+
+    const handlePlayPause = () => {
+        setIsRunning(!isRunning);
+    };
+
+    const formatTime = (timeInSeconds) => {
+        const minutes = Math.floor(timeInSeconds / 60);
+        const seconds = timeInSeconds % 60;
+        return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+    };
+
+    // useEffect(() => {
+    //     formik.setFieldValue("timeTracked", formatTime(time));
+    // }, [time, formik]);
     return (
         <div>
             <div className='border border-solid border-gray-600 rounded-md p-4 my-1'>
@@ -161,9 +234,10 @@ const TableTask = () => {
                                 <tr>
                                     {/* <th></th> */}
                                     <th className="p-2 text-start w-1/3">Name</th>
-                                    <th className="p-2 text-center ">Assignee</th>
+                                    <th className="p-2 text-center ">Assignee</th>  
                                     <th className="p-2 text-center ">Due Date</th>
                                     <th className="p-2 text-center ">Tags</th>
+                                    <th className="p-2 text-center">TimeTracked</th>
                                     <th className="p-2 text-center ">Edit</th>
                                     <th className="p-2 text-center ">Add Subtask</th>
                                 </tr>
@@ -186,7 +260,25 @@ const TableTask = () => {
                                                 {task.name}
                                             </td>
                                             <td className=''>
-                                                <PopUp
+                                                <div className="rounded-md h-7 px-2 flex items-center justify-center cursor-pointer gap-1">
+                                                    {task.assignees.length === 0 ? (
+                                                        <>
+                                                            <img
+                                                                src={Assignee}
+                                                                alt="assignee"
+                                                                className="aspect-square h-3 w-3 object-contain"
+                                                            />
+                                                            <p className="text-xs text-gray-100">Assignee</p>
+                                                        </>
+                                                    ) : (
+                                                        <AssigneesProfilesRow
+                                                            className="h-[14px] w-[14px] !border-none"
+                                                            users={task.assignees}
+                                                            maxLength={3}
+                                                        />
+                                                    )}
+                                                </div>
+                                                {/* <PopUp
                                                     className="bg-gray-700 left-0 w-[250px] rounded-primary flex flex-col"
                                                     popoverButton={
                                                         <div className="rounded-md h-7 px-2 flex items-center justify-center cursor-pointer gap-1">
@@ -219,7 +311,7 @@ const TableTask = () => {
                                                             }}
                                                         />
                                                     }
-                                                />
+                                                /> */}
                                             </td>
                                             <td>
                                                 <PopUp
@@ -235,7 +327,15 @@ const TableTask = () => {
                                                 />
                                             </td>
                                             <td>
-                                                <PopUp
+                                                <div className="rounded-md h-7 px-2 flex items-center justify-center cursor-pointer gap-1">
+                                                    <TagIcon className="aspect-square h-3 w-3 object-contain" />
+                                                    <p className="text-xs text-gray-100">
+                                                        {tags.length === 0
+                                                            ? `${task.tags.map((value, index) => value.name)}`
+                                                            : `${task.tags.length} ${tags.length === 1 ? "tag" : "tags"}`}
+                                                    </p>
+                                                </div>
+                                                {/* <PopUp
                                                     className="bg-gray-700 left-0 w-[250px] rounded-primary flex flex-col"
                                                     popoverButton={
                                                         <div className="rounded-md h-7 px-2 flex items-center justify-center cursor-pointer gap-1">
@@ -250,7 +350,7 @@ const TableTask = () => {
                                                     child={
                                                         < UpdateTagsDialog
                                                             name="tags"
-                                                            task={task} 
+                                                            task={task}
                                                             onAdd={(tag) => setTags([...tags, tag])}
                                                             tags={tags}
                                                             onRemove={(tag) => {
@@ -259,11 +359,81 @@ const TableTask = () => {
                                                             }}
                                                         />
                                                     }
+                                                /> */}
+                                            </td>
+                                            <td>
+                                                <PopUp
+                                                    className="bg-gray-700 left-0 w-[250px] rounded-primary flex flex-col"
+                                                    popoverButton={
+                                                        <div className="rounded-md h-7 border border-gray-100 border-opacity-40 px-2 flex items-center justify-center cursor-pointer gap-1">
+                                                            {formik.values.timeTracked === null ? (
+                                                                <>
+                                                                    <img
+                                                                        src={Stopwatch}
+                                                                        alt="stopwatch"
+                                                                        className="aspect-square h-3 w-3 object-contain"
+                                                                    />
+                                                                    <p className="text-xs text-gray-100">Time Tracked</p>
+                                                                </>
+                                                            ) : (
+                                                                <>
+                                                                    <img
+                                                                        src={Stopwatch}
+                                                                        alt="stopwatch"
+                                                                        className="aspect-square h-3 w-3 object-contain"
+                                                                    />
+                                                                    <p className="text-xs text-gray-100">{formik.values.timeTracked}</p>
+                                                                </>
+                                                            )}
+                                                        </div>
+                                                    }
+                                                    child={
+                                                        <div className="w-96 p-4 bg-gray-900 text-white rounded-lg shadow-lg">
+                                                            <input
+                                                                type="text"
+                                                                name="timetracked"
+                                                                className="bg-gray-700 w-full p-2 text-gray-500"
+                                                                placeholder="Time Tracked"
+                                                                value={formik.values.timeTracked || ""}
+                                                                readOnly
+                                                            />
+                                                            <div className="mb-4 flex gap-2">
+                                                                <input
+                                                                    type="time"
+                                                                    className="w-full p-2 bg-gray-800 text-white focus:outline-none"
+                                                                    value={startTime}
+                                                                    onChange={(e) => {
+                                                                        setStartTime(e.target.value);
+                                                                        calculateDuration(e.target.value, endTime);
+                                                                    }}
+                                                                />
+                                                                <span className="flex items-center text-gray-300">to</span>
+                                                                <input
+                                                                    type="time"
+                                                                    className="w-full p-2 bg-gray-800 text-white focus:outline-none"
+                                                                    value={endTime}
+                                                                    onChange={(e) => {
+                                                                        setEndTime(e.target.value);
+                                                                        calculateDuration(startTime, e.target.value);
+                                                                    }}
+                                                                />
+                                                            </div>
+                                                            <div className="flex justify-center items-center mb-4">
+                                                                <div className="text-3xl font-semibold">{formatTime(time)}</div>
+                                                            </div>
+                                                            <button
+                                                                onClick={handlePlayPause}
+                                                                className={`px-6 py-2 rounded-lg text-white ${isRunning ? 'bg-red-500' : 'bg-green-500'}`}
+                                                            >
+                                                                {isRunning ? 'Stop' : 'Start'}
+                                                            </button>
+                                                        </div>
+                                                    }
                                                 />
                                             </td>
                                             <td className="text-center">
                                                 <AuthButton
-                                                    onClick={() => onEditTask(task)}
+                                                    onClick={(e) => onEditTask(e, task.uuid)}
                                                     type="button"
                                                     value="Edit"
                                                 />

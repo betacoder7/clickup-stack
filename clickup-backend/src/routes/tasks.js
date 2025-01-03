@@ -60,7 +60,7 @@ app.put("/auth/:taskUUID", async (res) => {
         const body = res.get("body");
 
         nullCheck(body, {
-            bothCannotBeNull: ['status', 'name', 'dueDate', 'startDate', 'endDate', 'timeTracked', 'timeEstimate', 'totalTime', 'description'],
+            bothCannotBeNull: ['status', 'name', 'dueDate', 'startDate', 'endDate',  'timeEstimate',  'description'],
             mustBeNullFields: defaultNullFields,
         });
 

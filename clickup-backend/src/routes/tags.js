@@ -3,14 +3,14 @@ import bodyParser from "../global/middlewares/bodyparser";
 
 import { nullCheck, defaultNullFields } from "../global/validations/nullCheck";
 import { errorBody } from "../global/functions/errorBody";
-import { tags, tasktags, workspaces, tasks, subtasks, subtasktag } from "../../models";
+import { tags, tasktags, workspaces, tasks } from "../../models";
 import Jwt from "../global/middlewares/jwt";
 import { destroy, findOne, update } from "../global/functions/modelOperations";
 import { Hono } from "hono";
 import logError from "../global/functions/log";
 import { Op } from "sequelize";
-// import subtasks from "../../models/subtasks";
-// import subtasktag from "../../models/subtasktag";
+import subtasks from "../../models/subtasks";
+import subtasktag from "../../models/subtasktag";
 
 const app = new Hono();
 app.router = new RegExpRouter();
@@ -209,6 +209,49 @@ app.post("/auth/task/:taskUUID/tag/:tagUUID", async (res) => {
     }
 });
 
+app.put("/auth/taskupdata/:taskUUID/tagupdata/:tagUUID", async (res) => {
+    try {
+        const taskUUID = res.req.param("taskUUID");
+        const tagUUID = res.req.param("tagUUID");
+
+        const task = await findOne(tasks, "uuid", taskUUID);
+
+        if (task == null) {
+            return res.json(errorBody("Task doesn't exists"), 404);
+        }
+
+        const tag = await findOne(tags, "uuid", tagUUID);
+
+        if (tag == null) {
+            return res.json(errorBody("Tag doesn't exists"), 404);
+        }
+
+        const taskTag = await tasktags.findOne({
+            where: {
+                taskId: task.id,
+                tagId: tag.id
+            }
+        });
+
+        if (!taskTag) {
+            return res.status(404).json({ message: "TaskTag not found" });
+        }
+
+        // Update tasktag if it exists
+        taskTag.tagId = tag.id;
+        taskTag.taskId = task.id;
+        taskTag.uuid = DataTypes.UUIDV4(); // or use a provided UUID
+
+        // Save the updated tasktag
+        await taskTag.save();
+
+        return res.json({ res: taskTag });
+    } catch (e) {
+        logError(e.toString(), "/tags/auth/taskupdata/:taskUUID/tagupdata/:tagUUID", "put");
+        return res.json(errorBody(e.message), 400);
+    }
+});
+
 /**
  * /auth/task/:taskUUID/tag/:tagUUID - DELETE - remove a tag in task
  */
@@ -294,37 +337,37 @@ app.post("/auth/subtask/:subtaskUUID/tag/:tagUUID", async (res) => {
  * /auth/task/:taskUUID/tag/:tagUUID - DELETE - remove a tag in subtask
  */
 
-app.delete("/auth/subtask/:subtaskUUID/tag/:tagUUID", async (res) => {
-    try {
-        const subtaskUUID = res.req.param("subtaskUUID");
-        const tagUUID = res.req.param("tagUUID");
+// app.delete("/auth/subtask/:subtaskUUID/tag/:tagUUID", async (res) => {
+//     try {
+//         const subtaskUUID = res.req.param("subtaskUUID");
+//         const tagUUID = res.req.param("tagUUID");
 
-        const subtask = await findOne(subtasks, "uuid", subtaskUUID);
+//         const subtask = await findOne(subtasks, "uuid", subtaskUUID);
 
-        if (subtask == null) {
-            return res.json(errorBody("SubTask doesn't exists"), 404);
-        }
+//         if (subtask == null) {
+//             return res.json(errorBody("SubTask doesn't exists"), 404);
+//         }
 
-        const tag = await findOne(tags, "uuid", tagUUID);
+//         const tag = await findOne(tags, "uuid", tagUUID);
 
-        if (tag == null) {
-            return res.json(errorBody("Tag doesn't exists"), 404);
-        }
+//         if (tag == null) {
+//             return res.json(errorBody("Tag doesn't exists"), 404);
+//         }
 
-        await tasktags.destroy({
-            where: {
-                tagId: tag.id,
-                subtaskId: subtask.id,
-            }
-        });
+//         await tasktags.destroy({
+//             where: {
+//                 tagId: tag.id,
+//                 subtaskId: subtask.id,
+//             }
+//         });
 
-        return res.json({ res: "Tag removed" });
-    }
-    catch (e) {
-        logError(e.toString(), "/tags/auth/subtask/:subtaskUUID/tag/:tagUUID", "DELETE");
-        return res.json(errorBody(e.message), 400);
-    }
-});
+//         return res.json({ res: "Tag removed" });
+//     }
+//     catch (e) {
+//         logError(e.toString(), "/tags/auth/subtask/:subtaskUUID/tag/:tagUUID", "DELETE");
+//         return res.json(errorBody(e.message), 400);
+//     }
+// });
 
 
 export default app;

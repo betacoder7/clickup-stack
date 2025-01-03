@@ -21,7 +21,7 @@ import * as AssignsSlice from "../../../utilities/redux/slices/taskassigns";
 import { XMarkIcon } from "@heroicons/react/20/solid";
 import { useParams } from 'react-router-dom';
 
-const EditTask = () => {
+const EditTask = ({task}) => {
     const dispatcher = useDispatch();
 
     const listUUID = useParams()
@@ -51,18 +51,11 @@ const EditTask = () => {
         },
     });
 
-    // function onSubmit(values) {
-       
-    // }
-
-    // betacoder7
-
-
     async function updateTask() {
         dispatcher(LoadingBar.setProgress(50));
 
         const [, taskError] = await fetch({
-            route: `/tasks/auth/taskuuid`,
+            route: `/tasks/auth/${task.uuid}`,
             requestType: "put",
             body: {
                 name: formik.values.name,
@@ -71,9 +64,7 @@ const EditTask = () => {
                 dueDate: formik.values.dueDate ? new Date(formik.values.dueDate).toISOString() : null,
                 startDate: formik.values.StartDate ? new Date(formik.values.StartDate).toISOString() : null,
                 endDate: formik.values.Enddate ? new Date(formik.values.Enddate).toISOString() : null,
-                timeTracked: formik.values.timeTracked,
                 timeEstimate: formik.values.timeEstimate,
-                totalTime: formik.values.timeEstimate
             },
         });
 

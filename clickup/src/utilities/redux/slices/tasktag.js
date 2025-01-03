@@ -25,6 +25,23 @@ const tagtaskSlice = createSlice({
             }
         },
 
+        updatetagtask: (state, action) => {
+            const { taskUUID, tagUUID, updatedTags } = action.payload;
+
+            // Update the tag if it exists
+            if (state.tag[tagUUID]) {
+                state.tag[tagUUID] = {
+                    ...state.tag[tagUUID],
+                    ...updatedTags
+                };
+            }
+
+            // Ensure the taskUUID is linked to the updated tag if not already
+            if (state.tagIdbyTask[taskUUID] && !state.tagIdbyTask[taskUUID].includes(tagUUID)) {
+                state.tagIdbyTask[taskUUID].push(tagUUID);
+            }
+        },
+
         //remove an tag
         removetagtask: (state, action) => {
             const { taskUUID, tagUUID } = action.payload;
@@ -43,12 +60,12 @@ const tagtaskSlice = createSlice({
             }
         },
         //clear all tags
-        cleartag: (state) => {
+        cleartagtask: (state) => {
             state.tag = {};
             state.tagIdbyTask = {};
         },
     }
 });
 
-export const { addtagtask, removetagtask, cleartag } = tagtaskSlice.actions;
+export const { addtagtask, removetagtask, updatetagtask, cleartagtask } = tagtaskSlice.actions;
 export default tagtaskSlice.reducer;

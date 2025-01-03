@@ -14,10 +14,11 @@ import PickAssignees from "../../../global/components/popups/pick-assignees";
 import AssigneesProfilesRow from "./assignees-profiles-row";
 import SingleDatePicker from "../../../global/components/popups/single-date-picker";
 import UpdateTagsDialog from "../../../global/components/popups/update-tags";
+import { useEffect, useState } from "react";
 
 
 
-const Commantaskfrom = ({formik ,assignees ,setAssignees,tags,setTags}) => {
+const Commantaskfrom = ({ formik, assignees, setAssignees, tags, setTags }) => {
 
     return (
         <>
@@ -123,35 +124,6 @@ const Commantaskfrom = ({formik ,assignees ,setAssignees,tags,setTags}) => {
                                         onChange={(e) => formik.setFieldValue("timeEstimate", e.target.value)} />
                                 </div>}
                             />
-                            <PopUp className="bg-gray-700 left-0 w-[250px] rounded-primary flex flex-col"
-                                popoverButton={
-                                    <div className="rounded-md h-7 border border-gray-100 border-opacity-40 px-2 flex items-center justify-center cursor-pointer gap-1">
-                                        {formik.values.timeTracked === null ? (
-                                            <>
-                                                <img src={Stopwatch} alt="stopwatch" className="aspect-square h-3 w-3 object-contain" />
-                                                <p className="text-xs text-gray-100">Time Tracked</p>
-                                            </>
-                                        ) : (
-                                            <>
-                                                <img src={Stopwatch} alt="stopwatch" className="aspect-square h-3 w-3 object-contain" />
-                                                <p className="text-xs text-gray-100">{formik.values.timeTracked}</p>
-                                            </>
-                                        )}
-                                    </div>
-                                }
-                                child={
-                                    <div>
-                                        <input
-                                            type="text"
-                                            name="timetracked"
-                                            className="bg-gray-700 w-full p-2 text-gray-500"
-                                            placeholder="Time Tracked"
-                                            value={formik.values.timeTracked}
-                                            onChange={(e) => formik.setFieldValue("timeTracked", e.target.value)}
-                                        />
-                                    </div>
-                                }
-                            />
                         </div>
                         <div className="flex justify-end">
                             <Button className="h-10" type="submit" value="Create Task" />
@@ -164,3 +136,129 @@ const Commantaskfrom = ({formik ,assignees ,setAssignees,tags,setTags}) => {
 };
 
 export default Commantaskfrom;
+
+ // const [startTime, setStartTime] = useState("");
+    // const [endTime, setEndTime] = useState("");
+
+// useEffect(() => {
+//     if (startTime && endTime) {
+//         calculateDuration();
+//     }
+// }, [startTime, endTime]);
+
+    // const calculateDuration = (start, end) => {
+    //     if (start && end) {
+    //         const startTime = new Date(`1970-01-01T${start}:00`);
+    //         let endTime = new Date(`1970-01-01T${end}:00`);
+
+    //         // Handle next-day scenario
+    //         if (endTime <= startTime) {
+    //             endTime.setDate(endTime.getDate() + 1); 
+    //         }
+
+    //         const diff = (endTime - startTime) / 1000; 
+    //         const hours = Math.floor(diff / 3600);
+    //         const minutes = Math.floor((diff % 3600) / 60);
+    //         const duration = `${hours}h ${minutes}m`;
+
+    //         // Update formik value for timeTracked
+    //         formik.setFieldValue("timeTracked", duration);
+    //     }
+    // };
+
+    // const [isRunning, setIsRunning] = useState(false);
+    // const [time, setTime] = useState(0);
+
+    // useEffect(() => {
+    //     let timer;
+    //     if (isRunning) {
+    //         timer = setInterval(() => {
+    //             setTime((prevTime) => prevTime + 1);
+    //         }, 1000);
+    //     } else {
+    //         clearInterval(timer);
+    //     }
+    //     return () => clearInterval(timer);
+    // }, [isRunning]);
+
+    // const handlePlayPause = () => {
+    //     setIsRunning(!isRunning);
+    // };
+
+    // const formatTime = (timeInSeconds) => {
+    //     const minutes = Math.floor(timeInSeconds / 60);
+    //     const seconds = timeInSeconds % 60;
+    //     return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+    // };
+
+    // useEffect(() => {
+    //     formik.setFieldValue("timeTracked", formatTime(time));
+    // }, [time, formik]);
+// {/*                            <PopUp
+//                                 className="bg-gray-700 left-0 w-[250px] rounded-primary flex flex-col"
+//                                 popoverButton={
+//                                     <div className="rounded-md h-7 border border-gray-100 border-opacity-40 px-2 flex items-center justify-center cursor-pointer gap-1">
+//                                         {formik.values.timeTracked === null ? (
+//                                             <>
+//                                                 <img
+//                                                     src={Stopwatch}
+//                                                     alt="stopwatch"
+//                                                     className="aspect-square h-3 w-3 object-contain"
+//                                                 />
+//                                                 <p className="text-xs text-gray-100">Time Tracked</p>
+//                                             </>
+//                                         ) : (
+//                                             <>
+//                                                 <img
+//                                                     src={Stopwatch}
+//                                                     alt="stopwatch"
+//                                                     className="aspect-square h-3 w-3 object-contain"
+//                                                 />
+//                                                 <p className="text-xs text-gray-100">{formik.values.timeTracked}</p>
+//                                             </>
+//                                         )}
+//                                     </div>
+//                                 }
+//                                 child={
+//                                     <div className="w-96 p-4 bg-gray-900 text-white rounded-lg shadow-lg">
+//                                         <input
+//                                             type="text"
+//                                             name="timetracked"
+//                                             className="bg-gray-700 w-full p-2 text-gray-500"
+//                                             placeholder="Time Tracked"
+//                                             value={formik.values.timeTracked || ""}
+//                                             readOnly
+//                                         />
+//                                         <div className="mb-4 flex gap-2">
+//                                             <input
+//                                                 type="time"
+//                                                 className="w-full p-2 bg-gray-800 text-white focus:outline-none"
+//                                                 value={startTime}
+//                                                 onChange={(e) => {
+//                                                     setStartTime(e.target.value);
+//                                                     calculateDuration(e.target.value, endTime);
+//                                                 }}
+//                                             />
+//                                             <span className="flex items-center text-gray-300">to</span>
+//                                             <input
+//                                                 type="time"
+//                                                 className="w-full p-2 bg-gray-800 text-white focus:outline-none"
+//                                                 value={endTime}
+//                                                 onChange={(e) => {
+//                                                     setEndTime(e.target.value);
+//                                                     calculateDuration(startTime, e.target.value);
+//                                                 }}
+//                                             />
+//                                         </div>
+//                                         <div className="flex justify-center items-center mb-4">
+//                                             <div className="text-3xl font-semibold">{formatTime(time)}</div>
+//                                         </div>
+//                                         <button
+//                                             onClick={handlePlayPause}
+//                                             className={`px-6 py-2 rounded-lg text-white ${isRunning ? 'bg-red-500' : 'bg-green-500'}`}
+//                                         >
+//                                             {isRunning ? 'Stop' : 'Start'}
+//                                         </button>
+//                                     </div>
+//                                 }
+//                             /> */}

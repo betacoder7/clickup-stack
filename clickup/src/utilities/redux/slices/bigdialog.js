@@ -16,6 +16,7 @@ const BigDialogSlice = createSlice({
         },
         hide(state) {
             state.open = false;
+            state.child = null; 
         },
     }
 });

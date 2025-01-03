@@ -6,12 +6,18 @@ const initialData = {
     hasFetched: {},
 };
 
+
 const taskSlice = createSlice({
     name: 'tasksSlice',
     initialState: initialData,
     reducers: {
         add: (state, action) => {
             const { task, listUUID } = action.payload;
+
+            console.log(listUUID ,"avction");
+            console.log(task ,"taskactionss");
+            
+            
 
             state.tasks = {
                 ...state.tasks,
@@ -53,3 +59,5 @@ const taskSlice = createSlice({
 
 export const { add, remove, update, clear, toggleFetch } = taskSlice.actions;
 export default taskSlice.reducer;
+
+

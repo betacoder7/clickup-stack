@@ -19,6 +19,9 @@ export default function UpdateListDialog({ folderUUID, listUUID }) {
 
     const list = useSelector(state => state.listSlice.lists[listUUID]);
 
+    // console.log(list ,"listdatabhgjgh");
+    
+
     const formik = useFormik({
         initialValues: {
             name: list?.name ?? "",

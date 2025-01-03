@@ -28,9 +28,9 @@ module.exports = (sequelize, DataTypes) => {
     dueDate: { type: DataTypes.DATE, allowNull: true },
     startDate: { type: DataTypes.DATE, allowNull: true },
     endDate: { type: DataTypes.DATE, allowNull: true },
-    timeTracked: { type: DataTypes.STRING, allowNull: true },
+    // timeTracked: { type: DataTypes.STRING, allowNull: true },
     timeEstimate: { type: DataTypes.STRING, allowNull: true },
-    totalTime: { type: DataTypes.STRING, allowNull: true },
+    // totalTime: { type: DataTypes.STRING, allowNull: true },
     description: { type: DataTypes.STRING, allowNull: true },
     uuid: { type: DataTypes.UUID, allowNull: false, defaultValue: DataTypes.UUIDV4 },
   }, {

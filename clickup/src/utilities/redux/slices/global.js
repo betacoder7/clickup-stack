@@ -18,7 +18,6 @@ const globalSlice = createSlice({
             // console.log(action, "action");
             // console.log(value, "value");
 
-
             switch (action) {
                 case "update":
                     state[key] = value;

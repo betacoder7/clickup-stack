@@ -7,7 +7,7 @@ import { PlusIcon } from "@heroicons/react/24/outline";
 import AddTagDialog from "./create-tag";
 import PopUp from "../dialog/popup";
 
-export default function UpdateTagsDialog({ onAdd, onRemove, tags ,task}) {
+export default function UpdateTagsDialog({ onAdd, onRemove, tags,  }) {
     const globalSlice = useSelector(state => state.globalSlice);
     const workspaceUUID = globalSlice.defaultWorkspaceUUID;
 
@@ -87,7 +87,12 @@ export default function UpdateTagsDialog({ onAdd, onRemove, tags ,task}) {
         <div className="flex flex-wrap gap-2 px-4 pt-3">
             {tags.map(tag => <TagContainer key={tag.uuid} tag={tag} canEdit={true} onRemove={onRemove} />)}
         </div>
-
+        {/* <div className=" px-4">
+            {task.tags.map((value, index) =>
+                <TagContainer key={value.uuid} tag={value} canEdit={true} onRemove={onRemove}/>
+                // value.name
+            )}
+        </div> */}
         <div className="flex flex-col gap-1 w-full overflow-y-auto p-2 h-[250px]">
             {fetched && searchTags != null && searchTags.length !== 0 ? (
                 <>
