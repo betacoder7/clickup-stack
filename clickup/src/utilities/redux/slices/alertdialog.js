@@ -17,7 +17,7 @@ const AlertDialogSlice = createSlice({
             state.type = action.payload.type;
             state.title = action.payload.title;
             state.description = action.payload.description;
-            state.onButtonClicked = action.payload.onButtonClicked;
+            state.onButtonClicked = action.payload.onButtonClicked || null;
             state.positiveButtonText = action.payload.positiveButtonText;
 
             state.open = true;

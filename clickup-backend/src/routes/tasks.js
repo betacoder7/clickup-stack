@@ -74,7 +74,10 @@ app.put("/auth/:taskUUID", async (res) => {
 
         const updatedTask = await update(tasks, "id", task.id, body);
 
-        return res.json({ res: updatedTask });
+        console.log("updatedTask :- ===========>" ,updatedTask );
+        const updatedTaskdata = await findOne(tasks, "id", task.id);
+
+        return res.json({ res: updatedTaskdata });
     }
     catch (e) {
         logError(e.toString(), "/tasks/auth/:taskUUID", "PUT");

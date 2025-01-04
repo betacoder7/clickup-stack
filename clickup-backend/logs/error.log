@@ -378,3 +378,28 @@ notNull Violation: microtaskassigns.microtaskId cannot be null
 16:01:46 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
 16:02:19 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
 16:03:56 GMT+0530 (India Standard Time) - /subtasks/auth/task/:taskUUID/all - GET - SequelizeEagerLoadingError: subtasktags is not associated to subtasks!
+09:15:15 GMT+0530 (India Standard Time) - /users/login - POST - SequelizeConnectionRefusedError: Failed to connect
+09:19:32 GMT+0530 (India Standard Time) - /tags/auth/taskupdata/:taskUUID/tagupdata/:tagUUID - put - TypeError: undefined is not an object (evaluating 'res.status(404).json')
+09:27:23 GMT+0530 (India Standard Time) - /tags/auth/taskupdata/:taskUUID/tagupdata/:tagUUID - put - ReferenceError: Can't find variable: DataTypes
+09:53:48 GMT+0530 (India Standard Time) - /tags/auth/taskupdata/:taskUUID/tagupdata/:tagUUID - put - TypeError: undefined is not an object (evaluating 'req.params.taskUUID')
+10:00:41 GMT+0530 (India Standard Time) - /tags/auth/taskupdata/:taskUUID/tagupdata/:tagUUID - POST - TypeError: undefined is not an object (evaluating 'res.req.params.taskUUID')
+10:08:14 GMT+0530 (India Standard Time) - /tags/auth/taskupdata/:taskUUID/tagupdata/:tagUUID - POST - TypeError: res.req.params is not a function. (In 'res.req.params("taskUUID")', 'res.req.params' is undefined)
+10:20:28 GMT+0530 (India Standard Time) - /tags/auth/taskupdata/:taskUUID/tagupdata/:tagUUID - POST - ReferenceError: Can't find variable: taskTag
+10:22:04 GMT+0530 (India Standard Time) - /tags/auth/taskupdata/:taskUUID/tagupdata/:tagUUID - POST - AssertionError [ERR_ASSERTION]: Missing where attribute in the options parameter
+10:40:26 GMT+0530 (India Standard Time) - /tags/auth/taskupdata/:taskUUID/tagupdata/:tagUUID - put - TypeError: Right side of assignment cannot be destructured
+11:47:50 GMT+0530 (India Standard Time) - /tags/auth/taskupdata/:taskUUID/tagupdata/:tagUUID - put - ReferenceError: Cannot access 'tasktag' before initialization.
+12:11:47 GMT+0530 (India Standard Time) - /tags/auth/taskupdata/:taskUUID/tagupdata/:tagUUID - put - ReferenceError: Cannot access 'tasktag' before initialization.
+12:19:59 GMT+0530 (India Standard Time) - /tags/auth/taskupdata/:taskUUID/tagupdata/:tagUUID - put - ReferenceError: Cannot access 'tasktag' before initialization.
+12:20:49 GMT+0530 (India Standard Time) - /tags/auth/taskupdata/:taskUUID/tagupdata/:tagUUID - put - ReferenceError: Cannot access 'tasktag' before initialization.
+12:34:00 GMT+0530 (India Standard Time) - /tags/auth/taskupdata/:taskUUID/tagupdata/:tagUUID - put - ReferenceError: Cannot access 'tasktag' before initialization.
+12:35:38 GMT+0530 (India Standard Time) - /tags/auth/taskupdata/:taskUUID/tagupdata/:tagUUID - put - ReferenceError: Cannot access 'tasktag' before initialization.
+12:37:59 GMT+0530 (India Standard Time) - /tags/auth/taskupdata/:taskUUID/tagupdata/:tagUUID - put - ReferenceError: Cannot access 'tasktag' before initialization.
+12:41:10 GMT+0530 (India Standard Time) - /tags/auth/taskupdata/:taskUUID/tagupdata/:tagUUID - put - ReferenceError: Cannot access 'tasktag' before initialization.
+12:41:54 GMT+0530 (India Standard Time) - /tags/auth/taskupdata/:taskUUID/tagupdata/:tagUUID - put - ReferenceError: Cannot access 'tasktag' before initialization.
+12:43:21 GMT+0530 (India Standard Time) - /tags/auth/taskupdata/:taskUUID/tagupdata/:tagUUID - put - ReferenceError: Cannot access 'tasktag' before initialization.
+12:43:22 GMT+0530 (India Standard Time) - /tags/auth/taskupdata/:taskUUID/tagupdata/:tagUUID - put - ReferenceError: Cannot access 'tasktag' before initialization.
+12:43:23 GMT+0530 (India Standard Time) - /tags/auth/taskupdata/:taskUUID/tagupdata/:tagUUID - put - ReferenceError: Cannot access 'tasktag' before initialization.
+12:43:24 GMT+0530 (India Standard Time) - /tags/auth/taskupdata/:taskUUID/tagupdata/:tagUUID - put - ReferenceError: Cannot access 'tasktag' before initialization.
+13:12:43 GMT+0530 (India Standard Time) - /tags/auth/taskupdata/:taskUUID/tagupdata/:tagUUID - put - ReferenceError: Cannot access 'tasktag' before initialization.
+13:17:08 GMT+0530 (India Standard Time) - /tags/auth/taskupdata/:taskUUID/tagupdata/:tagUUID - put - ReferenceError: Cannot access 'tasktag' before initialization.
+13:21:14 GMT+0530 (India Standard Time) - /tags/auth/taskupdata/:taskUUID/tagupdata/:tagUUID - put - ReferenceError: Cannot access 'tasktag' before initialization.

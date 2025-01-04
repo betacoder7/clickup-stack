@@ -60,6 +60,46 @@ app.post("/auth/task/:taskUUID/user/:uuid", async (res) => {
     }
 });
 
+app.put("/auth/taskassignedupdata/:taskUUID/user/:uuid", async (res) => {
+    try {
+        const task = await findOne(tasks, "uuid", taskUUID);
+        console.log(task, "task");
+
+        if (task == null) {
+            return res.json(errorBody("Task doesn't exists"), 404);;
+        }
+
+        const user = await findOne(users, "uuid", uuid);
+
+        if (user == null) {
+            return res.json(errorBody("User doesn't exists"), 404);
+        }
+
+        const prevData = await taskassigns.findOne({
+            where: {
+                taskId: task.id,
+                userId: user.id,
+            }
+        });
+
+        if (prevData != null) {
+            return res.json(errorBody("Already assigned"), 409);
+        }
+
+        const data = taskassigns.updata({
+            where: {
+                taskId: task.id,
+                userId: user.id,
+            }
+        });
+
+        return res.json({ res: data });
+    } catch (e) {
+        logError(e.toString(), "/assignees/auth/taskassignedupdata/:taskUUID/user/:uuid", "put");
+        return res.json(errorBody(e.message), 400);
+    }
+});
+
 /**
  * /auth/task/:taskUUID/user/:uuid - POST - unassign a task
  */

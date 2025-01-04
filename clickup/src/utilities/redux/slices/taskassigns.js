@@ -24,6 +24,20 @@ const assignsSlice = createSlice({
                 state.assignIdsByTask[taskUUID].push(userUUID);
             }
         },
+
+        updataAssign: (state, action) => {
+            const { taskUUID, userUUID, updatedassignment } = action.payload;
+            if (state.assigns[userUUID]) {
+                state.assigns[userUUID] = {
+                    ...state.assigns[userUUID],
+                    ...updatedassignment
+                };
+            }
+
+            if (state.assignIdsByTask[taskUUID] && !state.assignIdsByTask[taskUUID].includes(userUUID)) {
+                state.assignIdsByTask[taskUUID].push(userUUID);
+            }
+        },
         // Remove an assignment
         removeAssign: (state, action) => {
             const { taskUUID, userUUID } = action.payload;

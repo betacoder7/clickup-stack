@@ -209,48 +209,37 @@ app.post("/auth/task/:taskUUID/tag/:tagUUID", async (res) => {
     }
 });
 
-app.put("/auth/taskupdata/:taskUUID/tagupdata/:tagUUID", async (res) => {
+app.put("/auth/taskupdata/:taskUUID", async (res) => {
     try {
+        const {tagId , taskId} = res.get("body");
         const taskUUID = res.req.param("taskUUID");
-        const tagUUID = res.req.param("tagUUID");
 
-        const task = await findOne(tasks, "uuid", taskUUID);
-
-        if (task == null) {
-            return res.json(errorBody("Task doesn't exists"), 404);
+        if (!tagId) {
+            return res.status(400).json(errorBody("tagId is required in the request body"));
         }
 
-        const tag = await findOne(tags, "uuid", tagUUID);
+        console.log("TaskTag ID:", tasktag.id, "Current Tag ID:", tasktag.tagId);
 
-        if (tag == null) {
-            return res.json(errorBody("Tag doesn't exists"), 404);
+        const tasktag = await findOne(tasktags, "uuid", taskUUID);
+
+        if (!tasktag) {
+            return res.json(errorBody("Task  doesn't exists in Tasktag"), 404);
         }
 
-        const taskTag = await tasktags.findOne({
-            where: {
-                taskId: task.id,
-                tagId: tag.id
-            }
-        });
+        console.log(tasktag ,"tasktagtasktagtasktagtasktagtasktag");
+        
+        const updatedTaskTag = await tasktags.update(
+            { tagId: tagId }, 
+            { where: { id: tasktag.id } } // Match the record to update
+        );
 
-        if (!taskTag) {
-            return res.status(404).json({ message: "TaskTag not found" });
-        }
-
-        // Update tasktag if it exists
-        taskTag.tagId = tag.id;
-        taskTag.taskId = task.id;
-        taskTag.uuid = DataTypes.UUIDV4(); // or use a provided UUID
-
-        // Save the updated tasktag
-        await taskTag.save();
-
-        return res.json({ res: taskTag });
+        return res.json({ res: updatedTaskTag });
     } catch (e) {
         logError(e.toString(), "/tags/auth/taskupdata/:taskUUID/tagupdata/:tagUUID", "put");
         return res.json(errorBody(e.message), 400);
     }
 });
+
 
 /**
  * /auth/task/:taskUUID/tag/:tagUUID - DELETE - remove a tag in task

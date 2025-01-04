@@ -156,7 +156,7 @@ export default function UpdateTaskDialog({ listUUID, taskUUID }) {
     async function updateTask() {
         dispatcher(LoadingBar.setProgress(50));
 
-        const [taskupdata, taskError] = await fetch({
+        const [updatataskdata, taskError] = await fetch({
             route: `/tasks/auth/${taskUUID}`,
             requestType: "put",
             body: {
@@ -170,12 +170,13 @@ export default function UpdateTaskDialog({ listUUID, taskUUID }) {
             },
         });
 
+        console.log(updatataskdata['res'], "updatataskdataupdatataskdataupdatataskdataupdatataskdata");
+
+
         if (taskError != null) {
             return onError(taskError, updateTask);
         }
 
-
-        dispatcher(LoadingBar.setProgress(100));
 
         const updatedTask = {
             ...tasks,
@@ -188,27 +189,54 @@ export default function UpdateTaskDialog({ listUUID, taskUUID }) {
             timeEstimate: formik.values.timeEstimate,
         };
 
+        console.log(updatedTask, "updatedTaskupdatedTaskupdatedTaskupdatedTaskupdatedTaskupdatedTask");
+
+        const updatedtaskdata = updatataskdata['res'];
+        const updatedtaskuuid = updatedtaskdata.uuid;
+
+        console.log(updatedtaskuuid, "updatedtaskuuid uuid");
+
+        assignees.map(async (value) => {
+            // console.log(value.uuid, "user uuid");
+
+            const [taskassignsupdata, taskassignsError] = await fetch({
+                route: `/assignees/auth/task/${taskUUID}/user/${value.uuid}`,
+                requestType: "put",
+            });
+
+
+            if (taskassignsError != null) {
+                return onError(taskassignsError, createTask);
+            }
+
+            if (taskassignsupdata) {
+                dispatcher(AssignsSlice.updataAssign({ taskUUID: taskUUID, userUUID: value.uuid, assignment: taskassignsupdata }));
+            }
+        });
+
 
         tags.forEach(async (value, index) => {
-            // console.log(value.uuid, "tags uuid");
-
             const [tagtaskdata, tagtaskError] = await fetch({
-                // route: `/tags/auth/task/${taskUUID}/tag/${value.uuid}`,
-                // route:`/tags/auth/taskupdata/${taskUUID}/tagupdata/${value.uuid}`,
-                route:`/tags/auth/taskupdata/:taskUUID/tagupdata/:tagUUID`,
-                requestType: "post"
+                route: `/tags/auth/taskupdata/${taskUUID}`,
+                requestType: "put",
+                body: {
+                    tagId: value.uuid,
+                    taskId: taskUUID 
+                }
             });
-            // console.log(tagtaskdata, "tagtaskdata");
+
+            console.log(tagtaskdata, "tagtaskdata");
 
             if (tagtaskError != null) {
-                return onError(tagtaskError, createTask);
+                return onError(tagtaskError, updateTask);
             }
 
             if (tagtaskdata) {
                 dispatcher(updatetagtask({ taskUUID: taskUUID, tagUUID: value.uuid, tags: tagtaskdata }));
             }
-        });
+        })
 
+        dispatcher(LoadingBar.setProgress(100));
 
         dispatcher(TaskSlice.update({ task: updatedTask }));
 
