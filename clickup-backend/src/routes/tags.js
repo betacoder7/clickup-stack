@@ -211,26 +211,29 @@ app.post("/auth/task/:taskUUID/tag/:tagUUID", async (res) => {
 
 app.put("/auth/taskupdata/:taskUUID", async (res) => {
     try {
-        const {tagId , taskId} = res.get("body");
+        const { tagId, taskId } = res.get("body");
         const taskUUID = res.req.param("taskUUID");
 
-        if (!tagId) {
-            return res.status(400).json(errorBody("tagId is required in the request body"));
+        const task = await findOne(tasks, "uuid", taskUUID);
+
+        if (!task) {
+            return res.json(errorBody("Task  doesn't exists"), 404);
         }
 
-        console.log("TaskTag ID:", tasktag.id, "Current Tag ID:", tasktag.tagId);
-
-        const tasktag = await findOne(tasktags, "uuid", taskUUID);
+        const tasktag = await findOne(tasktags, "taskId", task.id);
 
         if (!tasktag) {
-            return res.json(errorBody("Task  doesn't exists in Tasktag"), 404);
+            return res.json(errorBody("TaskTag doesn't exists"), 404);
         }
 
-        console.log(tasktag ,"tasktagtasktagtasktagtasktagtasktag");
-        
         const updatedTaskTag = await tasktags.update(
-            { tagId: tagId }, 
-            { where: { id: tasktag.id } } // Match the record to update
+            {
+                tagId: tagId,
+                taskId: taskId
+            },
+            {
+                where: { uuid: tasktag.uuid }
+            }
         );
 
         return res.json({ res: updatedTaskTag });

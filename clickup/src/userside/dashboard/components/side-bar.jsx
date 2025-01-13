@@ -444,7 +444,8 @@ export default function Sidebar() {
                                                                     <div className="p-1 group-hover:opacity-0 opacity-100">
                                                                         {!folderExpanded
                                                                             ? <FolderIcon className="h-full w-full" />
-                                                                            : <FolderOpenIcon className="h-full w-full" />}
+                                                                            : <FolderOpenIcon className="h-full w-full" />
+                                                                        }
                                                                     </div>
                                                                     <IconButton onClick={(e) => {
                                                                         e.stopPropagation();

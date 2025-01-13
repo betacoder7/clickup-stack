@@ -60,42 +60,37 @@ app.post("/auth/task/:taskUUID/user/:uuid", async (res) => {
     }
 });
 
-app.put("/auth/taskassignedupdata/:taskUUID/user/:uuid", async (res) => {
+app.put("/auth/taskassignedupdata/:taskUUID", async (res) => {
     try {
+
+        const { userId, taskId } = res.get("body");
+        const taskUUID = res.req.param("taskUUID");
+
         const task = await findOne(tasks, "uuid", taskUUID);
-        console.log(task, "task");
 
-        if (task == null) {
-            return res.json(errorBody("Task doesn't exists"), 404);;
+        if (!task) {
+            return res.json(errorBody("Task  doesn't exists"), 404);
         }
 
-        const user = await findOne(users, "uuid", uuid);
+        const taskassignee = await findOne(taskassigns, "taskId", task.id);
 
-        if (user == null) {
-            return res.json(errorBody("User doesn't exists"), 404);
+        if (!taskassignee) {
+            return res.json(errorBody("Task doesn't have assigned user"), 404);
         }
 
-        const prevData = await taskassigns.findOne({
-            where: {
-                taskId: task.id,
-                userId: user.id,
+        const updatataskassigns = await taskassigns.update(
+            {
+                userId: userId,
+                taskId: taskId
+            },
+            {
+                where: { uuid: taskassignee.uuid }
             }
-        });
+        );
 
-        if (prevData != null) {
-            return res.json(errorBody("Already assigned"), 409);
-        }
-
-        const data = taskassigns.updata({
-            where: {
-                taskId: task.id,
-                userId: user.id,
-            }
-        });
-
-        return res.json({ res: data });
+        return res.json({ res: updatataskassigns });
     } catch (e) {
-        logError(e.toString(), "/assignees/auth/taskassignedupdata/:taskUUID/user/:uuid", "put");
+        logError(e.toString(), "/assignees/auth/taskassignedupdata/:taskUUID", "put");
         return res.json(errorBody(e.message), 400);
     }
 });

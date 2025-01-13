@@ -403,3 +403,508 @@ notNull Violation: microtaskassigns.microtaskId cannot be null
 13:12:43 GMT+0530 (India Standard Time) - /tags/auth/taskupdata/:taskUUID/tagupdata/:tagUUID - put - ReferenceError: Cannot access 'tasktag' before initialization.
 13:17:08 GMT+0530 (India Standard Time) - /tags/auth/taskupdata/:taskUUID/tagupdata/:tagUUID - put - ReferenceError: Cannot access 'tasktag' before initialization.
 13:21:14 GMT+0530 (India Standard Time) - /tags/auth/taskupdata/:taskUUID/tagupdata/:tagUUID - put - ReferenceError: Cannot access 'tasktag' before initialization.
+10:29:31 GMT+0530 (India Standard Time) - /tags/auth/taskupdata/:taskUUID/tagupdata/:tagUUID - put - TypeError: undefined is not an object (evaluating 'res.status(400).json')
+10:33:25 GMT+0530 (India Standard Time) - /tags/auth/taskupdata/:taskUUID/tagupdata/:tagUUID - put - Error: WHERE parameter "id" has invalid "undefined" value
+10:38:47 GMT+0530 (India Standard Time) - /tags/auth/taskupdata/:taskUUID/tagupdata/:tagUUID - put - Error: WHERE parameter "id" has invalid "undefined" value
+10:43:30 GMT+0530 (India Standard Time) - /tags/auth/taskupdata/:taskUUID/tagupdata/:tagUUID - put - Error: WHERE parameter "id" has invalid "undefined" value
+10:55:38 GMT+0530 (India Standard Time) - /tags/auth/taskupdata/:taskUUID/tagupdata/:tagUUID - put - Error: WHERE parameter "id" has invalid "undefined" value
+10:57:02 GMT+0530 (India Standard Time) - /tags/auth/taskupdata/:taskUUID/tagupdata/:tagUUID - put - Error: WHERE parameter "id" has invalid "undefined" value
+11:04:23 GMT+0530 (India Standard Time) - /tags/auth/taskupdata/:taskUUID/tagupdata/:tagUUID - put - Error: WHERE parameter "uuid" has invalid "undefined" value
+11:07:47 GMT+0530 (India Standard Time) - /tags/auth/taskupdata/:taskUUID/tagupdata/:tagUUID - put - ReferenceError: Can't find variable: updatedTaskTags
+11:36:29 GMT+0530 (India Standard Time) - /tags/auth/taskupdata/:taskUUID/tagupdata/:tagUUID - put - TypeError: undefined is not an object (evaluating 'updatedTaskTag[0]')
+13:19:42 GMT+0530 (India Standard Time) - /timeTracked/auth/time/:taskUUID - POST - Error: notNull Violation: taskID cannot be null
+13:22:14 GMT+0530 (India Standard Time) - /timeTracked/auth/time/:taskUUID - POST - Error: notNull Violation: taskID cannot be null
+13:24:13 GMT+0530 (India Standard Time) - /timeTracked/auth/time/:taskUUID - POST - Error: notNull Violation: taskID cannot be null
+13:26:12 GMT+0530 (India Standard Time) - /timeTracked/auth/time/:taskUUID - POST - Error: notNull Violation: taskID cannot be null
+13:31:36 GMT+0530 (India Standard Time) - /timeTracked/auth/time/:taskUUID - POST - Error: notNull Violation: taskID cannot be null
+13:32:30 GMT+0530 (India Standard Time) - /timeTracked/auth/time/:taskUUID - POST - Error: notNull Violation: taskID cannot be null
+13:32:52 GMT+0530 (India Standard Time) - /timeTracked/auth/time/:taskUUID - POST - Error: notNull Violation: taskID cannot be null
+13:38:07 GMT+0530 (India Standard Time) - /timeTracked/auth/time/:taskUUID - POST - Error: notNull Violation: taskID cannot be null
+13:39:44 GMT+0530 (India Standard Time) - /timeTracked/auth/time/:taskUUID - POST - Error: notNull Violation: taskID cannot be null
+13:40:28 GMT+0530 (India Standard Time) - /timeTracked/auth/time/:taskUUID - POST - Error: notNull Violation: taskID cannot be null
+13:43:55 GMT+0530 (India Standard Time) - /timeTracked/auth/time/:taskUUID - POST - ReferenceError: Can't find variable: taskUUID
+13:46:33 GMT+0530 (India Standard Time) - /timeTracked/auth/time/:taskUUID - POST - ReferenceError: Can't find variable: taskUUID
+14:53:55 GMT+0530 (India Standard Time) - /timeTracked/auth/time/:taskUUID - POST - ReferenceError: Can't find variable: taskUUID
+15:21:33 GMT+0530 (India Standard Time) - /timeTracked/auth/time/:taskUUID - POST - ReferenceError: Can't find variable: taskUUID
+15:52:21 GMT+0530 (India Standard Time) - /timeTracked/auth/time/:taskUUID - POST - ReferenceError: Can't find variable: taskUUID
+16:02:48 GMT+0530 (India Standard Time) - /timeTracked/auth/time/:taskUUID - POST - ReferenceError: Can't find variable: taskUUID
+16:09:14 GMT+0530 (India Standard Time) - /timeTracked/auth/time/:taskUUID - POST - ReferenceError: Can't find variable: taskUUID
+16:09:33 GMT+0530 (India Standard Time) - /timeTracked/auth/time/:taskUUID - POST - ReferenceError: Can't find variable: taskUUID
+16:14:47 GMT+0530 (India Standard Time) - /timeTracked/auth/time/:taskUUID - POST - ReferenceError: Can't find variable: taskUUID
+16:15:21 GMT+0530 (India Standard Time) - /timeTracked/auth/time/:taskUUID - POST - ReferenceError: Can't find variable: taskUUID
+16:16:18 GMT+0530 (India Standard Time) - /timeTracked/auth/time/:taskUUID - POST - ReferenceError: Can't find variable: taskUUID
+16:19:29 GMT+0530 (India Standard Time) - /timeTracked/auth/time/:taskUUID - POST - ReferenceError: Can't find variable: taskUUID
+16:20:18 GMT+0530 (India Standard Time) - /timeTracked/auth/time/:taskUUID - POST - ReferenceError: Can't find variable: taskUUID
+16:24:13 GMT+0530 (India Standard Time) - /timeTracked/auth/time/:taskUUID - POST - ReferenceError: Can't find variable: taskUUID
+16:31:50 GMT+0530 (India Standard Time) - /timeTracked/auth/time/:taskUUID - POST - ReferenceError: Can't find variable: taskUUID
+16:35:18 GMT+0530 (India Standard Time) - /timeTracked/auth/time/:taskUUID - POST - TypeError: undefined is not an object (evaluating 'res.req.params.taskUUID')
+16:36:19 GMT+0530 (India Standard Time) - /timeTracked/auth/time/:taskUUID - POST - TypeError: undefined is not an object (evaluating 'res.req.params.taskUUID')
+16:40:50 GMT+0530 (India Standard Time) - /timeTracked/auth/time/:taskUUID - POST - TypeError: undefined is not an object (evaluating 'res.req.params.taskUUID')
+16:48:10 GMT+0530 (India Standard Time) - /timeTracked/auth/time/:taskUUID - POST - TypeError: undefined is not an object (evaluating 'res.req.params.taskUUID')
+16:50:36 GMT+0530 (India Standard Time) - /timeTracked/auth/time/:taskUUID - POST - TypeError: undefined is not an object (evaluating 'res.req.params.taskUUID')
+16:53:03 GMT+0530 (India Standard Time) - /timeTracked/auth/time/:taskUUID - POST - ReferenceError: Can't find variable: taskUUID
+17:00:26 GMT+0530 (India Standard Time) - /timeTracked/auth/time/:taskUUID - POST - TypeError: undefined is not an object (evaluating 'res.req.json')
+17:00:59 GMT+0530 (India Standard Time) - /timeTracked/auth/time/:taskUUID - POST - Error: notNull Violation: date cannot be null
+17:05:13 GMT+0530 (India Standard Time) - /timeTracked/auth/time/:taskUUID - POST - ReferenceError: Can't find variable: tasks
+17:09:30 GMT+0530 (India Standard Time) - /timeTracked/auth/time/:taskUUID - POST - ReferenceError: Can't find variable: tasks
+17:11:43 GMT+0530 (India Standard Time) - /timeTracked/auth/time/:taskUUID - POST - TypeError: model.findOne is not a function. (In 'model.findOne({
+    where: {
+      [key]: value
+    }
+  })', 'model.findOne' is undefined)
+17:12:44 GMT+0530 (India Standard Time) - /timeTracked/auth/time/:taskUUID - POST - TypeError: model.findOne is not a function. (In 'model.findOne({
+    where: {
+      [key]: value
+    }
+  })', 'model.findOne' is undefined)
+17:21:03 GMT+0530 (India Standard Time) - /timeTracked/auth/time/:taskUUID - POST - TypeError: model.findOne is not a function. (In 'model.findOne({
+    where: {
+      [key]: value
+    }
+  })', 'model.findOne' is undefined)
+17:23:42 GMT+0530 (India Standard Time) - /timeTracked/auth/time/:taskUUID - POST - TypeError: model.findOne is not a function. (In 'model.findOne({
+    where: {
+      [key]: value
+    }
+  })', 'model.findOne' is undefined)
+17:26:45 GMT+0530 (India Standard Time) - /timeTracked/auth/time/:taskUUID - POST - TypeError: model.findOne is not a function. (In 'model.findOne({
+    where: {
+      [key]: value
+    }
+  })', 'model.findOne' is undefined)
+17:27:43 GMT+0530 (India Standard Time) - /timeTracked/auth/time/:taskUUID - POST - TypeError: model.findOne is not a function. (In 'model.findOne({
+    where: {
+      [key]: value
+    }
+  })', 'model.findOne' is undefined)
+17:31:31 GMT+0530 (India Standard Time) - /timeTracked/auth/time/:taskUUID - POST - TypeError: timeTracked.create is not a function. (In 'timeTracked.create({
+      ...body,
+      taskId: task.id
+    })', 'timeTracked.create' is undefined)
+17:34:53 GMT+0530 (India Standard Time) - /timeTracked/auth/time/:taskUUID - POST - TypeError: timeTracked.create is not a function. (In 'timeTracked.create({
+      ...body,
+      taskId: task.id
+    })', 'timeTracked.create' is undefined)
+17:36:38 GMT+0530 (India Standard Time) - /timeTracked/auth/time/:taskUUID - POST - TypeError: timeTracked.create is not a function. (In 'timeTracked.create({
+      ...body,
+      taskId: task.id
+    })', 'timeTracked.create' is undefined)
+17:39:48 GMT+0530 (India Standard Time) - /timeTracked/auth/time/:taskUUID - POST - TypeError: timeTracked.create is not a function. (In 'timeTracked.create({
+      ...body,
+      taskId: task.id
+    })', 'timeTracked.create' is undefined)
+17:44:00 GMT+0530 (India Standard Time) - /timeTracked/auth/time/:taskUUID - POST - ReferenceError: Can't find variable: json
+17:45:49 GMT+0530 (India Standard Time) - /timeTracked/auth/time/:taskUUID - POST - ReferenceError: Can't find variable: timeTrackeds
+17:50:31 GMT+0530 (India Standard Time) - /timeTracked/auth/time/:taskUUID - POST - ReferenceError: Can't find variable: timeTrackeds
+17:55:12 GMT+0530 (India Standard Time) - /timeTracked/auth/time/:taskUUID - POST - ReferenceError: Can't find variable: timeTrackeds
+17:56:17 GMT+0530 (India Standard Time) - /timeTracked/auth/time/:taskUUID - POST - ReferenceError: Can't find variable: timeTrackeds
+17:57:04 GMT+0530 (India Standard Time) - /timeTracked/auth/time/:taskUUID - POST - ReferenceError: Can't find variable: timeTrackeds
+18:37:27 GMT+0530 (India Standard Time) - /timeTracked/auth/time/:taskUUID - POST - Error: notNull Violation:  duration cannot be null
+18:39:31 GMT+0530 (India Standard Time) - /timeTracked/auth/time/:taskUUID - POST - Error: notNull Violation:  duration cannot be null
+18:40:45 GMT+0530 (India Standard Time) - /timeTracked/auth/time/:taskUUID - POST - Error: notNull Violation:  duration cannot be null
+18:43:57 GMT+0530 (India Standard Time) - /timeTracked/auth/time/:taskUUID - POST - Error: notNull Violation:  duration cannot be null
+18:44:53 GMT+0530 (India Standard Time) - /timeTracked/auth/time/:taskUUID - POST - Error: notNull Violation:  duration cannot be null
+18:51:07 GMT+0530 (India Standard Time) - /timeTracked/auth/time/:taskUUID - POST - SequelizeValidationError: notNull Violation: timeTrackeds.date cannot be null
+18:52:01 GMT+0530 (India Standard Time) - /timeTracked/auth/time/:taskUUID - POST - SequelizeValidationError: notNull Violation: timeTrackeds.date cannot be null
+18:52:43 GMT+0530 (India Standard Time) - /timeTracked/auth/time/:taskUUID - POST - SequelizeValidationError: notNull Violation: timeTrackeds.date cannot be null
+18:59:20 GMT+0530 (India Standard Time) - /timeTracked/auth/time/:taskUUID - POST - Error: notNull Violation:  duration cannot be null
+19:00:59 GMT+0530 (India Standard Time) - /timeTracked/auth/time/:taskUUID - POST - Error: notNull Violation: date  duration cannot be null
+10:56:00 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:56:00 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:56:00 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:56:00 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:56:00 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:56:00 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:56:00 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:56:00 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:56:00 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:56:00 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:56:00 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:56:00 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:56:00 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:56:00 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:56:00 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:56:42 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:56:42 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:56:42 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:56:42 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:56:42 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:56:42 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:56:42 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:56:42 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:56:42 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:56:42 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:56:42 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:56:42 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:56:42 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:56:42 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:56:42 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:58:55 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:58:55 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:58:55 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:58:55 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:58:55 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:58:55 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:58:55 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:58:55 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:58:55 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:58:55 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:58:55 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:58:55 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:58:55 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:58:55 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:58:55 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:59:07 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:59:07 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:59:07 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:59:07 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:59:07 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:59:07 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:59:07 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:59:07 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:59:07 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:59:07 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:59:07 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:59:07 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:59:07 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:59:07 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:59:07 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:59:08 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:59:08 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:59:08 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:59:08 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:59:08 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:59:08 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:59:08 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:59:08 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:59:08 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:59:08 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:59:08 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:59:08 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:59:08 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:59:08 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:59:08 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:59:48 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:59:48 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:59:48 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:59:48 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:59:48 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:59:48 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:59:48 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:59:48 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:59:48 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:59:48 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:59:48 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:59:48 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:59:48 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:59:48 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+10:59:48 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+11:00:03 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+11:00:03 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+11:00:03 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+11:00:03 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+11:00:03 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+11:00:03 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+11:00:03 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+11:00:03 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+11:00:03 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+11:00:03 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+11:00:03 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+11:00:03 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+11:00:03 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+11:00:03 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+11:00:03 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+11:00:15 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+11:00:15 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+11:00:15 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+11:00:15 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+11:00:15 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+11:00:15 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+11:00:15 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+11:00:15 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+11:00:15 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+11:00:15 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+11:00:15 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+11:00:15 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+11:00:15 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+11:00:15 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+11:00:15 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+11:00:16 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+11:00:16 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+11:00:16 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+11:00:16 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+11:00:16 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+11:00:16 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+11:00:16 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+11:00:16 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+11:00:16 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+11:00:16 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+11:00:16 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+11:00:16 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+11:00:16 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+11:00:16 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+11:00:16 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+11:00:40 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+11:00:40 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+11:00:40 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+11:00:40 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+11:00:40 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+11:00:40 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+11:00:40 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+11:00:40 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+11:00:40 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+11:00:40 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+11:00:40 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+11:00:40 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+11:00:40 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+11:00:40 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+11:00:40 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+11:01:39 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+11:01:39 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+11:01:39 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+11:01:39 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+11:01:39 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+11:01:39 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+11:01:39 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+11:01:39 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+11:01:39 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+11:01:39 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+11:01:39 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+11:01:39 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+11:01:39 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+11:01:39 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+11:01:39 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:41:10 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:41:10 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:41:10 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:41:10 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:41:10 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:41:10 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:41:10 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:41:10 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:41:10 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:41:10 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:41:10 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:41:10 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:41:10 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:41:10 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:41:10 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:41:31 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:41:31 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:41:31 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:41:31 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:41:31 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:41:31 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:41:31 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:41:31 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:41:31 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:41:31 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:41:31 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:41:31 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:41:31 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:41:31 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:41:31 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:41:35 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:41:35 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:41:35 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:41:35 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:41:35 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:41:35 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:41:35 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:41:35 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:41:35 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:41:35 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:41:35 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:41:35 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:41:35 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:41:35 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:41:35 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:41:36 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:41:36 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:41:36 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:41:36 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:41:36 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:41:36 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:41:36 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:41:36 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:41:36 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:41:36 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:41:36 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:41:36 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:41:36 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:41:36 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:41:36 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:42:07 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:42:07 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:42:07 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:42:07 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:42:07 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:42:07 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:42:07 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:42:07 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:42:07 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:42:07 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:42:07 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:42:07 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:42:07 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:42:07 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:42:07 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:42:08 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:42:08 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:42:08 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:42:08 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:42:08 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:42:08 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:42:08 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:42:08 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:42:08 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:42:08 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:42:08 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:42:08 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:42:08 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:42:08 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:42:08 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:42:12 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:42:12 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:42:12 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:42:12 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:42:12 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:42:12 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:42:12 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:42:12 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:42:12 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:42:12 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:42:12 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:42:12 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:42:12 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:42:12 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:42:12 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Cannot access 'task' before initialization.
+12:44:00 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - TypeError: timeTracked.forEach is not a function. (In 'timeTracked.forEach((entry) => {
+      const { date, duration } = entry, [hours, minutes] = duration.match(/(\d+)h (\d+)m/).slice(1).map(Number);
+      if (!totalDurations[date])
+        totalDurations[date] = { hours: 0, minutes: 0 };
+      totalDurations[date].hours += hours;
+      totalDurations[date].minutes += minutes;
+      overallHours += hours;
+      overallMinutes += minutes;
+    })', 'timeTracked.forEach' is undefined)
+12:44:00 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - TypeError: timeTracked.forEach is not a function. (In 'timeTracked.forEach((entry) => {
+      const { date, duration } = entry, [hours, minutes] = duration.match(/(\d+)h (\d+)m/).slice(1).map(Number);
+      if (!totalDurations[date])
+        totalDurations[date] = { hours: 0, minutes: 0 };
+      totalDurations[date].hours += hours;
+      totalDurations[date].minutes += minutes;
+      overallHours += hours;
+      overallMinutes += minutes;
+    })', 'timeTracked.forEach' is undefined)
+12:44:00 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - TypeError: timeTracked.forEach is not a function. (In 'timeTracked.forEach((entry) => {
+      const { date, duration } = entry, [hours, minutes] = duration.match(/(\d+)h (\d+)m/).slice(1).map(Number);
+      if (!totalDurations[date])
+        totalDurations[date] = { hours: 0, minutes: 0 };
+      totalDurations[date].hours += hours;
+      totalDurations[date].minutes += minutes;
+      overallHours += hours;
+      overallMinutes += minutes;
+    })', 'timeTracked.forEach' is undefined)
+12:49:03 GMT+0530 (India Standard Time) - /auth/totaltime/:taskUUID - get - TypeError: undefined is not an object (evaluating 'req.params.taskUUID')
+12:49:03 GMT+0530 (India Standard Time) - /auth/totaltime/:taskUUID - get - TypeError: undefined is not an object (evaluating 'req.params.taskUUID')
+12:49:03 GMT+0530 (India Standard Time) - /auth/totaltime/:taskUUID - get - TypeError: undefined is not an object (evaluating 'req.params.taskUUID')
+12:49:03 GMT+0530 (India Standard Time) - /auth/totaltime/:taskUUID - get - TypeError: undefined is not an object (evaluating 'req.params.taskUUID')
+12:49:03 GMT+0530 (India Standard Time) - /auth/totaltime/:taskUUID - get - TypeError: undefined is not an object (evaluating 'req.params.taskUUID')
+12:49:03 GMT+0530 (India Standard Time) - /auth/totaltime/:taskUUID - get - TypeError: undefined is not an object (evaluating 'req.params.taskUUID')
+12:49:03 GMT+0530 (India Standard Time) - /auth/totaltime/:taskUUID - get - TypeError: undefined is not an object (evaluating 'req.params.taskUUID')
+12:49:03 GMT+0530 (India Standard Time) - /auth/totaltime/:taskUUID - get - TypeError: undefined is not an object (evaluating 'req.params.taskUUID')
+12:49:03 GMT+0530 (India Standard Time) - /auth/totaltime/:taskUUID - get - TypeError: undefined is not an object (evaluating 'req.params.taskUUID')
+12:49:03 GMT+0530 (India Standard Time) - /auth/totaltime/:taskUUID - get - TypeError: undefined is not an object (evaluating 'req.params.taskUUID')
+12:49:03 GMT+0530 (India Standard Time) - /auth/totaltime/:taskUUID - get - TypeError: undefined is not an object (evaluating 'req.params.taskUUID')
+12:49:03 GMT+0530 (India Standard Time) - /auth/totaltime/:taskUUID - get - TypeError: undefined is not an object (evaluating 'req.params.taskUUID')
+12:49:03 GMT+0530 (India Standard Time) - /auth/totaltime/:taskUUID - get - TypeError: undefined is not an object (evaluating 'req.params.taskUUID')
+12:49:03 GMT+0530 (India Standard Time) - /auth/totaltime/:taskUUID - get - TypeError: undefined is not an object (evaluating 'req.params.taskUUID')
+12:49:03 GMT+0530 (India Standard Time) - /auth/totaltime/:taskUUID - get - TypeError: undefined is not an object (evaluating 'req.params.taskUUID')
+12:52:23 GMT+0530 (India Standard Time) - /auth/totaltime/:taskUUID - get - Error: WHERE parameter "uuid" has invalid "undefined" value
+12:52:23 GMT+0530 (India Standard Time) - /auth/totaltime/:taskUUID - get - Error: WHERE parameter "uuid" has invalid "undefined" value
+12:52:23 GMT+0530 (India Standard Time) - /auth/totaltime/:taskUUID - get - Error: WHERE parameter "uuid" has invalid "undefined" value
+12:52:23 GMT+0530 (India Standard Time) - /auth/totaltime/:taskUUID - get - Error: WHERE parameter "uuid" has invalid "undefined" value
+12:52:23 GMT+0530 (India Standard Time) - /auth/totaltime/:taskUUID - get - Error: WHERE parameter "uuid" has invalid "undefined" value
+12:52:23 GMT+0530 (India Standard Time) - /auth/totaltime/:taskUUID - get - Error: WHERE parameter "uuid" has invalid "undefined" value
+12:52:23 GMT+0530 (India Standard Time) - /auth/totaltime/:taskUUID - get - Error: WHERE parameter "uuid" has invalid "undefined" value
+12:52:23 GMT+0530 (India Standard Time) - /auth/totaltime/:taskUUID - get - Error: WHERE parameter "uuid" has invalid "undefined" value
+12:52:23 GMT+0530 (India Standard Time) - /auth/totaltime/:taskUUID - get - Error: WHERE parameter "uuid" has invalid "undefined" value
+12:52:23 GMT+0530 (India Standard Time) - /auth/totaltime/:taskUUID - get - Error: WHERE parameter "uuid" has invalid "undefined" value
+12:52:23 GMT+0530 (India Standard Time) - /auth/totaltime/:taskUUID - get - Error: WHERE parameter "uuid" has invalid "undefined" value
+12:52:23 GMT+0530 (India Standard Time) - /auth/totaltime/:taskUUID - get - Error: WHERE parameter "uuid" has invalid "undefined" value
+12:52:23 GMT+0530 (India Standard Time) - /auth/totaltime/:taskUUID - get - Error: WHERE parameter "uuid" has invalid "undefined" value
+12:52:23 GMT+0530 (India Standard Time) - /auth/totaltime/:taskUUID - get - Error: WHERE parameter "uuid" has invalid "undefined" value
+12:52:23 GMT+0530 (India Standard Time) - /auth/totaltime/:taskUUID - get - Error: WHERE parameter "uuid" has invalid "undefined" value
+12:54:20 GMT+0530 (India Standard Time) - /auth/totaltime/:taskUUID - get - Error: WHERE parameter "uuid" has invalid "undefined" value
+12:54:36 GMT+0530 (India Standard Time) - /auth/totaltime/:taskUUID - get - Error: WHERE parameter "uuid" has invalid "undefined" value
+12:54:38 GMT+0530 (India Standard Time) - /auth/totaltime/:taskUUID - get - Error: WHERE parameter "uuid" has invalid "undefined" value
+12:55:53 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - TypeError: timeTracked.forEach is not a function. (In 'timeTracked.forEach((entry) => {
+      const { date, duration } = entry, [hours, minutes] = duration.match(/(\d+)h (\d+)m/).slice(1).map(Number);
+      if (!totalDurations[date])
+        totalDurations[date] = { hours: 0, minutes: 0 };
+      totalDurations[date].hours += hours;
+      totalDurations[date].minutes += minutes;
+      overallHours += hours;
+      overallMinutes += minutes;
+    })', 'timeTracked.forEach' is undefined)
+12:56:32 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - TypeError: timeTracked.map is not a function. (In 'timeTracked.map((entry) => {
+      const { date, duration } = entry, [hours, minutes] = duration.match(/(\d+)h (\d+)m/).slice(1).map(Number);
+      if (!totalDurations[date])
+        totalDurations[date] = { hours: 0, minutes: 0 };
+      totalDurations[date].hours += hours;
+      totalDurations[date].minutes += minutes;
+      overallHours += hours;
+      overallMinutes += minutes;
+    })', 'timeTracked.map' is undefined)
+12:57:11 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - TypeError: timeTracked.map is not a function. (In 'timeTracked.map((entry) => {
+      const { date, duration } = entry, [hours, minutes] = duration.match(/(\d+)h (\d+)m/).slice(1).map(Number);
+      if (!totalDurations[date])
+        totalDurations[date] = { hours: 0, minutes: 0 };
+      totalDurations[date].hours += hours;
+      totalDurations[date].minutes += minutes;
+      overallHours += hours;
+      overallMinutes += minutes;
+    })', 'timeTracked.map' is undefined)
+12:57:13 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - TypeError: timeTracked.map is not a function. (In 'timeTracked.map((entry) => {
+      const { date, duration } = entry, [hours, minutes] = duration.match(/(\d+)h (\d+)m/).slice(1).map(Number);
+      if (!totalDurations[date])
+        totalDurations[date] = { hours: 0, minutes: 0 };
+      totalDurations[date].hours += hours;
+      totalDurations[date].minutes += minutes;
+      overallHours += hours;
+      overallMinutes += minutes;
+    })', 'timeTracked.map' is undefined)
+13:01:02 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Can't find variable: taskId
+13:02:15 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Can't find variable: taskId
+13:04:00 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Can't find variable: taskId
+13:05:07 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Can't find variable: taskId
+13:08:07 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Can't find variable: taskId
+13:11:52 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Can't find variable: taskId
+13:15:22 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Can't find variable: taskId
+13:16:50 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Can't find variable: taskId
+13:18:00 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Can't find variable: taskId
+13:18:44 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Can't find variable: taskId
+13:19:51 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Can't find variable: taskId
+13:21:58 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Can't find variable: taskId
+13:31:27 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Can't find variable: date
+13:33:46 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Can't find variable: date
+13:34:15 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Can't find variable: date
+15:04:41 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Can't find variable: hover
+15:04:41 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Can't find variable: hover
+15:04:41 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Can't find variable: hover
+15:04:41 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Can't find variable: hover
+15:04:41 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Can't find variable: hover
+15:04:41 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Can't find variable: hover
+15:04:41 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Can't find variable: hover
+15:04:42 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Can't find variable: hover
+15:04:42 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Can't find variable: hover
+15:04:42 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Can't find variable: hover
+15:04:42 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Can't find variable: hover
+15:04:42 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Can't find variable: hover
+15:04:42 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Can't find variable: hover
+15:04:42 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Can't find variable: hover
+15:04:42 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - ReferenceError: Can't find variable: hover
+18:32:54 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - TypeError: null is not an object (evaluating 'duration.match(/(\d+)h (\d+)m/).slice')
+18:33:07 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - TypeError: null is not an object (evaluating 'duration.match(/(\d+)h (\d+)m/).slice')
+19:04:23 GMT+0530 (India Standard Time) - /timeTracked/auth/totaltime/:taskUUID - get - TypeError: null is not an object (evaluating 'duration.match(/(\d+)h (\d+)m/).slice')

@@ -11,6 +11,7 @@ import tasks from "./routes/tasks";
 import subtasks from "./routes/subtasks";
 import microtasks from "./routes/microtasks";
 import assignees from "./routes/assignees";
+import timeTracked from './routes/TimeTracked';
 import { serveStatic } from 'hono/bun';
 
 const app = new Hono();
@@ -21,7 +22,7 @@ app.use('*',
   cors({
     origin:
       ['http://localhost:3000'],
-    allowMethods: ['POST', 'GET', 'PUT', 'DELETE', 'OPTIONS'],
+    allowMethods: ['POST', 'GET', 'PUT', 'DELETE','PATCH', 'OPTIONS'],
   }),
 );
 
@@ -42,6 +43,7 @@ app.route("/tags", tags);
 app.route("/subtasks", subtasks);
 app.route("/microtasks", microtasks);
 app.route("/assignees", assignees);
+app.route("/timeTracked", timeTracked);
 
 export default {
   port: 4000,

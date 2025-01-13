@@ -117,6 +117,7 @@ export default function UpdateTaskDialog({ listUUID, taskUUID }) {
                 requestType: "post",
             });
 
+            console.log(taskassignsData, "taskassignsData");
             if (taskassignsError != null) {
                 return onError(taskassignsError, createTask);
             }
@@ -124,7 +125,6 @@ export default function UpdateTaskDialog({ listUUID, taskUUID }) {
             if (taskassignsData) {
                 dispatcher(AssignsSlice.addAssign({ taskUUID: taskid, userUUID: value.uuid, assignment: taskassignsData }));
             }
-            // console.log(taskassignsData, "taskassignsData");
         });
 
 
@@ -170,7 +170,7 @@ export default function UpdateTaskDialog({ listUUID, taskUUID }) {
             },
         });
 
-        console.log(updatataskdata['res'], "updatataskdataupdatataskdataupdatataskdataupdatataskdata");
+        // console.log(updatataskdata['res'], "updatataskdataupdatataskdataupdatataskdataupdatataskdata");
 
 
         if (taskError != null) {
@@ -189,22 +189,26 @@ export default function UpdateTaskDialog({ listUUID, taskUUID }) {
             timeEstimate: formik.values.timeEstimate,
         };
 
-        console.log(updatedTask, "updatedTaskupdatedTaskupdatedTaskupdatedTaskupdatedTaskupdatedTask");
+        // console.log(updatedTask, "updatedTaskupdatedTaskupdatedTaskupdatedTaskupdatedTaskupdatedTask");
 
         const updatedtaskdata = updatataskdata['res'];
-        const updatedtaskuuid = updatedtaskdata.uuid;
+        const updatedtaskuuid = updatedtaskdata.id;
 
-        console.log(updatedtaskuuid, "updatedtaskuuid uuid");
+        // console.log(updatedtaskuuid, "updatedtaskuuid uuid");
 
         assignees.map(async (value) => {
-            // console.log(value.uuid, "user uuid");
+            console.log(value, "value updata");
 
             const [taskassignsupdata, taskassignsError] = await fetch({
-                route: `/assignees/auth/task/${taskUUID}/user/${value.uuid}`,
+                route: `/assignees/auth/taskassignedupdata/${taskUUID}`,
                 requestType: "put",
+                body: {
+                    userId: value.id,
+                    taskId: updatedtaskuuid,
+                }
             });
 
-
+            console.log(taskassignsupdata, "taskassignsupdatataskassignsupdatataskassignsupdata");
             if (taskassignsError != null) {
                 return onError(taskassignsError, createTask);
             }
@@ -220,8 +224,8 @@ export default function UpdateTaskDialog({ listUUID, taskUUID }) {
                 route: `/tags/auth/taskupdata/${taskUUID}`,
                 requestType: "put",
                 body: {
-                    tagId: value.uuid,
-                    taskId: taskUUID 
+                    tagId: value.id,
+                    taskId: updatedtaskuuid
                 }
             });
 
@@ -234,7 +238,7 @@ export default function UpdateTaskDialog({ listUUID, taskUUID }) {
             if (tagtaskdata) {
                 dispatcher(updatetagtask({ taskUUID: taskUUID, tagUUID: value.uuid, tags: tagtaskdata }));
             }
-        })
+        });
 
         dispatcher(LoadingBar.setProgress(100));
 

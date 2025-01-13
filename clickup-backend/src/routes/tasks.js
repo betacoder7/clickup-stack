@@ -22,7 +22,6 @@ app.use("*", bodyParser());
 app.post("/auth/:listUUID", async (res) => {
     try {
         const body = res.get("body");
-        // const body = req.body;
 
         nullCheck(body, {
             nonNullableFields: ['name'],
@@ -43,7 +42,6 @@ app.post("/auth/:listUUID", async (res) => {
         });
 
         // console.log(body, "body");
-
         return res.json({ res: task });
     }
     catch (e) {
@@ -60,7 +58,7 @@ app.put("/auth/:taskUUID", async (res) => {
         const body = res.get("body");
 
         nullCheck(body, {
-            bothCannotBeNull: ['status', 'name', 'dueDate', 'startDate', 'endDate',  'timeEstimate',  'description'],
+            bothCannotBeNull: ['status', 'name', 'dueDate', 'startDate', 'endDate', 'timeEstimate', 'description'],
             mustBeNullFields: defaultNullFields,
         });
 
@@ -74,7 +72,10 @@ app.put("/auth/:taskUUID", async (res) => {
 
         const updatedTask = await update(tasks, "id", task.id, body);
 
-        console.log("updatedTask :- ===========>" ,updatedTask );
+        const updatedTaskWithList = await findOne(tasks, "id", updatedTask.id,);
+
+        console.log(updatedTaskWithList, "updatedTaskWithList");
+
         const updatedTaskdata = await findOne(tasks, "id", task.id);
 
         return res.json({ res: updatedTaskdata });
